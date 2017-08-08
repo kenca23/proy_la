@@ -1,0 +1,773 @@
+{% extends "header.html" %} {% block style %}
+<!-- Carga de Galeria de imágenes -->
+
+ {% endblock %} {% block content %} 
+     
+    
+
+{% include "includes/reproductor.html" %}
+
+{% include "includes/menu.html" %}
+
+<!--<div class="har_firefly data-total="70" data-minPixel="1" data-maxPixel="5""></div>-->
+
+
+<!-- Slider -->
+<div class="har_slider_carousel har_slider_txt_animation">
+
+    <!-- Item -->
+    <div class="har_slider har_wht_txt">
+
+        <div class="har_slider_img har_image_bck" data-image="http://placehold.it/1400x900"></div>
+
+        <!-- Over -->
+        <div class="har_over" data-color="#000" data-opacity="0"></div>
+
+
+
+        <!-- Slider Texts -->
+        <div class="container">
+            <div class="har_slide_txt har_slide_left_middle text-left" data-0="opacity:1; margin-top:0px" data--400-bottom="opacity:0; margin-top:-100px">
+                <div class="har_slide_title">Lalalá<br>Nueva canción</div>
+            </div> 
+        </div>
+        <!-- Slider Texts End -->
+     <!-- container end -->
+    </div>
+
+
+     <!-- Item -->
+    <div class="har_slider  har_wht_txt">
+        <div class="har_slider_img har_image_bck" data-image="http://placehold.it/1400x900"></div>
+
+        <!-- Over -->
+        <div class="har_over" data-color="#000" data-opacity="0"></div>
+
+        <!-- Slider Texts -->
+        <div class="container">
+            <div class="har_slide_txt har_slide_left_middle text-left" data-0="opacity:1; margin-top:0px" data--400-bottom="opacity:0; margin-top:-100px">
+
+                <div class="har_slide_title">Lalalá<br>Canción actual</div>
+
+            </div> 
+        </div>
+        <!-- Slider Texts End -->
+
+     <!-- container end -->
+    </div>
+
+</div>
+<!-- carousel end -->
+<!-- Slider End -->
+
+
+ <!-- main section -->
+<section id="har_content" class="har_content">
+
+    <!-- section --> 
+    <main class="har_section har_image_bck"  id="video">
+        <div class="container text-center">
+
+            <h2>Último Video</h2>
+            <h3>Siguenos en <a href="#">Youtube</a> para ver más</h3>
+
+
+            <div class="har_db_slider">
+
+                <!-- item -->
+                <div class="har_video_item">
+                    <iframe src="https://www.youtube.com/embed/HcVv9R1ZR84" allowfullscreen></iframe>
+                </div>
+
+                <!-- item -->
+                <div class="har_video_item">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iNJdPyoqt8U?controls=1&amp;rel=0&amp;showinfo=0&amp;hd=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <!-- slider end -->
+
+        </div>
+        <!-- container end -->
+    </main>
+    <!--section end -->
+
+
+
+    <!-- section -->
+    <section class="har_section har_image_bck" data-color="#fafafa" id="featured">
+        <div class="container text-center">
+
+            <h2>Discografía</h2>
+
+
+            <div class="har_team_slider">
+
+               <!-- item -->
+               {% for obj in object_list %}
+               <div class="har_shop_al_item_bl">
+                    <a href="/discos/{{obj.nombDisco}}" class="har_shop_al_item">
+                        <span class="har_shop_item_disk">
+                            <span class="har_shop_item_cover har_image_bck" data-image="{{ MEDIA_URL }}{{ obj.imagen.url }}">
+                             <!--SoundCloud-->
+                             <!--<iframe width="100%" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/211480627&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>-->
+                             </span>
+                             <span class="har_shop_item_env"></span>
+                             <!--<span class="har_shop_item_vinyl">
+                                 <i class="ti ti-music-alt" aria-hidden="true"></i>
+                            </span>-->
+                        </span>
+                    </a>
+                    <h4>{{obj.nombre}}</h4>
+                    <span class="har_shop_desc">Disponible en</span>
+                    <span class="har_shop_price"></span>
+                    <span class="har_shop_soc_c">
+                        <a href="#"><i class="fa fa-spotify"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                        <a href="#"><i class="fa fa-headphones"></i></a>
+                    </span>
+                </div>
+                {% endfor %}
+                
+            </div>
+            <!-- slider end -->
+        </div>
+        <!-- container end -->
+    </section>
+    <!-- section end -->
+    
+    
+    <!-- section -->
+    <section class="har_section har_image_bck" id="artist">
+        <div class="container text-center">
+
+            <h2>Nuestra banda</h2>
+
+            <!-- boxes -->
+            <div class="har_icon_boxes row text-center">
+
+
+                <!-- slider -->  
+                <div class="har_team_slider">
+
+                    <!-- item -->
+                    <div class="har_icon_box har_team_box">
+                        <div class="har_icon_box_photo">
+                            <img src="http://placehold.it/500x750" alt="">
+                        </div>
+                        <div class="har_item_social">
+                            <a href="#"><i class="ti ti-facebook"></i></a>
+                            <a href="#"><i class="ti ti-twitter-alt"></i></a>
+                            <a href="#"><i class="ti ti-google"></i></a>
+                        </div>
+                        <h4><b>Kevin Calvo</b> <br>Guitarrista / Vocalista</h4>
+                    </div> 
+
+                    <!-- item -->
+                    <div class="har_icon_box har_team_box">
+                        <div class="har_icon_box_photo">
+                            <img src="http://placehold.it/500x750" alt="">
+                        </div>
+                        <div class="har_item_social">
+                            <a href="#"><i class="ti ti-facebook"></i></a>
+                            <a href="#"><i class="ti ti-twitter-alt"></i></a>
+                            <a href="#"><i class="ti ti-google"></i></a>
+                        </div>
+                        <h4><b>Kenneth Calvo</b> <br>Bajista</h4>
+                    </div> 
+
+                    <!-- item -->
+                    <div class="har_icon_box har_team_box">
+                        <div class="har_icon_box_photo">
+                            <img src="http://placehold.it/500x750" alt="">
+                        </div>
+                        <div class="har_item_social">
+                            <a href="#"><i class="ti ti-facebook"></i></a>
+                            <a href="#"><i class="ti ti-twitter-alt"></i></a>
+                            <a href="#"><i class="ti ti-google"></i></a>
+                        </div>
+                        <h4><b>Roberto Cruz</b> <br>Baterista</h4>
+                    </div> 
+
+                </div>
+                <!-- slider end -->
+            </div>
+            <!-- boxes end -->
+
+        </div>
+        <!-- container end -->
+
+    </section>
+    <!-- section end -->
+    
+
+
+    <!-- section -->
+    
+    <!--<section class="har_section har_image_bck har_fixed" id="events" data-image="http://placehold.it/1400x900" data-stellar-background-ratio="0.2">
+       
+        <div class="har_over" data-color="rgb(255, 255, 255)" data-opacity="0.9"></div>
+        <div class="container text-center">
+
+            <h2>Siguientes Eventos</h2>
+
+            <div class="row har_new_events">
+
+                <div class="panel-group accord-chev">
+
+                       
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Mario De Lupen</a>
+                            </h3>
+                            <div class="har_new_events_itemdesc_accordion har_image_bck" data-color="#fdfaf5">
+                                <h4 class="har_black">Soul of Bluse</h4>
+                                <a href="http://verothemes.com/harmony/html/08_shop_single.html" class="btn har_accord_btn">Buy Ticket</a>
+                            </div>
+
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                               <div class="row">
+                                    <div class="col-md-4">
+                                      <img class="har_new_events_img" src="http://placehold.it/790x766" alt="">
+                                    </div>
+                                    <div class="col-md-4 har_accordion_desc"> 
+                                        <p>Buy tickets for upcoming concerts, music festivals and more of your favorite artist touring. Find full tour schedules, seating charts and concert venue details at our musical site.Find upcoming events near you, with listings, tour dates and tickets for concerts, festivals, movies, performing arts, family events, sports and more.</p>
+                                    </div>
+                                    <div class="col-md-4 har_accordion_icons">
+                                        <span class="har_new_events_date">Aug 26</span><br>
+                                        <a href="#" class="har_accordion_location">
+                                            <span class="ti ti-location-pin"></span>
+                                        </a>
+                                        <h5>Empire state building</h5>
+                                        <br>
+                                    </div>
+                                </div>
+                               
+                                <div class="col-md-12 har_accordion_map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d206252.7225277454!2d-115.3154251090426!3d36.125195378987996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1471516180071" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </div>                                    
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" class="collapsed" href="#collapseTwo">Linda Parcher</a>
+                            </h3>
+                            <div class="har_new_events_itemdesc_accordion har_image_bck" data-color="#fdfaf5">
+                                <h4 class="har_black">Here or There</h4>
+                                <a href="http://verothemes.com/harmony/html/08_shop_single.html" class="btn har_accord_btn">Buy Ticket</a>
+                            </div>
+                        </div>
+
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="row">
+
+                                    <div class="col-md-4">
+                                       <img class="har_new_events_img" src="http://placehold.it/790x766" alt="">
+                                    </div>
+
+                                    <div class="col-md-4 har_accordion_desc"> 
+                                        <p>Buy tickets for upcoming concerts, music festivals and more of your favorite artist touring. Find full tour schedules, seating charts and concert venue details at our musical site.Find upcoming events near you, with listings, tour dates and tickets for concerts, festivals, movies, performing arts, family events, sports and more.</p>
+                                    </div>
+
+                                    <div class="col-md-4 har_accordion_icons">
+                                        <span class="har_new_events_date">Aug 26</span><br>
+                                        <a href="#" class="har_accordion_location">
+                                            <span class="ti ti-location-pin"></span>
+                                        </a>
+                                        <h5>Empire state building</h5>
+                                        <br>
+                                    </div>
+
+                                </div>
+                              
+                               <div class="col-md-12 har_accordion_map">
+                                   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d206252.7225277454!2d-115.3154251090426!3d36.125195378987996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1471516180071" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                               </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                   <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion"  class="collapsed" href="#collapseThree">Anthony Burdas</a>
+                            </h3>
+                            <div class="har_new_events_itemdesc_accordion har_image_bck" data-color="#fdfaf5">
+
+                                <h4 class="har_black">Finally we There</h4>
+                                <a href="http://verothemes.com/harmony/html/08_shop_single.html" class="btn har_accord_btn">Buy Ticket</a>
+
+                            </div>
+                        </div>
+
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="row">
+
+                                    <div class="col-md-4">
+                                       <img class="har_new_events_img" src="http://placehold.it/790x766" alt="">
+                                    </div>
+
+                                    <div class="col-md-4 har_accordion_desc"> 
+                                        <p>Buy tickets for upcoming concerts, music festivals and more of your favorite artist touring. Find full tour schedules, seating charts and concert venue details at our musical site.Find upcoming events near you, with listings, tour dates and tickets for concerts, festivals, movies, performing arts, family events, sports and more.</p>
+                                    </div>
+
+                                    <div class="col-md-4 har_accordion_icons">
+                                        <span class="har_new_events_date">Aug 26</span><br>
+                                         <a href="#" class="har_accordion_location">
+                                            <span class="ti ti-location-pin"></span>
+                                        </a>
+                                        <h5>Empire state building</h5>
+                                        <br>
+                                    </div>
+                                </div>
+                      
+                               <div class="col-md-12 har_accordion_map">
+                                   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d206252.7225277454!2d-115.3154251090426!3d36.125195378987996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1471516180071" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                               </div>
+                       
+                           </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+
+            </div>
+
+        </div>
+
+    </section> -->
+    <!-- section end -->
+
+    
+
+    <!-- section -->
+    <!--
+    <section class="har_section har_image_bck" id="gallery">
+        <div class="container-fluid text-center">
+
+            <h2>Photo Gallery</h2>
+
+            <div class="har_portfolio_poloroid">
+
+                <div class=" har_portfolio_item_poloroid event">
+                    <div class="har_portfolio_item_cont har_gray_overlay poloroid">
+                        <img src="http://placehold.it/656x423" alt="">
+                        <span class="har_port_titles">
+                            <span class="har_port_title">Centennial Park</span>
+                            <span class="har_port_subtitle">Ribfest 2016</span>
+                            <span class="har_port_icons">
+                                <a href="#"><i class="ti ti-link"></i></a>
+                                <a href="http://placehold.it/1400x900" class="lightbox"><i class="ti ti-search"></i></a>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="har_portfolio_item_poloroid event">
+                    <div class="har_portfolio_item_cont har_gray_overlay poloroid">
+                        <img src="http://placehold.it/656x423" alt="">
+                        <span class="har_port_titles">
+                            <span class="har_port_title">Paramount Theatre</span>
+                            <span class="har_port_subtitle">Salmon Festival</span>
+                            <span class="har_port_icons">
+                               <a href="#"><i class="ti ti-link"></i></a>
+                               <a href="http://placehold.it/1400x900" class="lightbox"><i class="ti ti-search"></i></a>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="har_portfolio_item_poloroid event">
+                    <div class="har_portfolio_item_cont har_gray_overlay poloroid">
+                        <img src="http://placehold.it/656x423" alt="">
+                        <span class="har_port_titles">
+                            <span class="har_port_title">Paramount Theatre</span>
+                            <span class="har_port_subtitle">Salmon Festival</span>
+                            <span class="har_port_icons">
+                               <a href="#"><i class="ti ti-link"></i></a>
+                               <a href="http://placehold.it/1400x900" class="lightbox"><i class="ti ti-search"></i></a>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="har_portfolio_item_poloroid event">
+                    <div class="har_portfolio_item_cont har_gray_overlay poloroid">
+                        <img src="http://placehold.it/656x423" alt="">
+                        <span class="har_port_titles">
+                            <span class="har_port_title">Paramount Theatre</span>
+                            <span class="har_port_subtitle">Salmon Festival</span>
+                            <span class="har_port_icons">
+                               <a href="#"><i class="ti ti-link"></i></a>
+                               <a href="http://placehold.it/1400x900" class="lightbox"><i class="ti ti-search"></i></a>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="har_portfolio_item_poloroid event">
+                    <div class="har_portfolio_item_cont har_gray_overlay poloroid">
+                        <img src="http://placehold.it/656x423" alt="">
+                        <span class="har_port_titles">
+                            <span class="har_port_title">Paramount Theatre</span>
+                            <span class="har_port_subtitle">Salmon Festival</span>
+                            <span class="har_port_icons">
+                               <a href="#"><i class="ti ti-link"></i></a>
+                               <a href="http://placehold.it/1400x900" class="lightbox"><i class="ti ti-search"></i></a>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="har_portfolio_item_poloroid event">
+                    <div class="har_portfolio_item_cont har_gray_overlay poloroid">
+                        <img src="http://placehold.it/656x423" alt="">
+                        <span class="har_port_titles">
+                            <span class="har_port_title">Paramount Theatre</span>
+                            <span class="har_port_subtitle">Salmon Festival</span>
+                            <span class="har_port_icons">
+                               <a href="#"><i class="ti ti-link"></i></a>
+                               <a href="http://placehold.it/1400x900" class="lightbox"><i class="ti ti-search"></i></a>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="har_portfolio_item_poloroid event">
+                    <div class="har_portfolio_item_cont har_gray_overlay poloroid">
+                        <img src="http://placehold.it/656x423" alt="">
+                        <span class="har_port_titles">
+                            <span class="har_port_title">Paramount Theatre</span>
+                            <span class="har_port_subtitle">Salmon Festival</span>
+                            <span class="har_port_icons">
+                               <a href="#"><i class="ti ti-link"></i></a>
+                               <a href="http://placehold.it/1400x900" class="lightbox"><i class="ti ti-search"></i></a>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>-->
+    <!-- section end -->
+
+
+<!-- section -->
+    <section class="har_section har_image_bck har_wht_txt har_fixed" data-image="http://placehold.it/1400x900" data-stellar-background-ratio="0.2" id="contacts">
+
+        <!-- Over -->
+        <div class="har_over" data-color="rgb(253, 91, 102)" data-opacity="0.7" data-blend="multiply"></div>
+
+        <div class="container-fluid text-center">
+            
+            <div class="row">
+                <!-- animation -->
+                <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
+                    <div class="col-md-8 col-sm-12 col-md-offset-2 har_form_animation">
+                        <h2>Suscribete</h2>
+                        <h3>Se el primero en saber sobre nuestros eventos.</h3>
+                        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+                        <form action="{% url 'subscribers:nuevo' %}" method="POST" id="har_form" class="har_form">
+                            {% csrf_token %}
+                                <div class="col-md-6">
+                                    {{ form.nombre.errors }}
+                                    {{ form.nombre }}
+                                    <!--<input type="text" class="form-control" placeholder="Nombre" name="nombre" required>-->
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.email.errors }}
+                                    {{ form.email }}
+                                    <!--<input type="text" class="form-control" placeholder="E-mail" name="email" required>-->
+                                    
+                                </div>
+
+                                <div class="col-md-6">
+                                    {{ form.pais.errors }}
+                                    {{ form.pais }}
+                                    <!--<input type="text" class="form-control" placeholder="País" name="pais">-->
+                                </div>
+                                <div class="col-md-6">
+                                    {{ form.ciudad.errors }}
+                                    {{ form.ciudad }}
+                                    <!--<input type="text" class="form-control" placeholder="Ciudad" name="ciudad" >-->
+                                </div>
+                                <div class="col-md-12">
+                                    <input id="btn-suscribirse" type="submit" class="btn" value="Suscribirse">
+
+                                </div>
+
+
+                        </form>
+
+                    </div>
+                    <!-- col end -->
+                </div>
+            </div>
+            <!-- row end -->
+        </div>
+        <!-- container end -->
+    </section>
+    <!-- section end -->
+
+{% include "includes/footer.html" %}     
+
+
+
+
+
+
+
+ {%endblock%} {% block js %} {% load static %}
+
+<script type="text/javascript" src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $owlContainer = $('.owl-carousel');
+        $owlSlides = $owlContainer.children('a');
+
+        // More than one slide - initialize the carousel
+        if ($owlSlides.length > 2) {
+            $owlContainer.owlCarousel({
+                // options go here
+                loop: true,
+                margin: 0,
+                nav: true,
+                autoWidth: false,
+                navText: ['<i class="fa fa-chevron-circle-left" title="Anterior"></i>', '<i class="fa  fa-chevron-circle-right" title="Siguiente"></i>'],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    500: {
+                        items: 2,
+                        margin: 20
+                    },
+                    800: {
+                        items: 3,
+                        margin: 20
+                    }
+                }
+
+            });
+            // Only one slide - do something else
+        } else if ($owlSlides.length == 2) {
+            $owlContainer.owlCarousel({
+                // options go here
+                loop: true,
+                margin: 0,
+                nav: true,
+                autoWidth: false,
+                navText: ['<i class="fa fa-chevron-circle-left" title="Anterior"></i>', '<i class="fa  fa-chevron-circle-right" title="Siguiente"></i>'],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    500: {
+                        items: 2,
+                        margin: 20
+                    },
+                    800: {
+                        items: 2,
+                        margin: 20
+                    }
+                }
+
+            });
+            // Only one slide - do something else
+        } else {
+            $owlContainer.owlCarousel({
+                center: true,
+                loop: false,
+                margin: 0,
+                nav: false,
+                autoWidth: false,
+                singleItem: true
+            });
+        }
+
+    });
+    
+    $("#id_email").change(function () {
+      var email = $(this).val();
+      console.log( $(this).val() );
+      
+      $.ajax({
+        url: '{% url "subscribers:validar_email" %}',
+        data: {
+          'email': email
+        },
+        dataType: 'json',
+        success: function (data) {
+          if (data.is_taken) {
+              $("#id_email").val('');
+              $.magnificPopup.open({
+                  items: {
+                    src: '<div id="small-dialog" class="zoom-anim-dialog"><h1>Usuario Existente</h1><p>' + data.error_message + '.</p></div>', // can be a HTML string, jQuery object, or CSS selector
+                    type: 'inline',
+                    fixedContentPos: false,
+            		fixedBgPos: true,
+            
+            		overflowY: 'auto',
+            
+            		closeBtnInside: true,
+            		preloader: false,
+            		
+            		midClick: true,
+            		removalDelay: 300,
+            		mainClass: 'my-mfp-slide-bottom'
+                  }
+                });
+          }
+        }
+      });
+      
+    });
+    
+    $('#har_form').on('submit', function(event){
+        event.preventDefault();
+        console.log("form submitted!")  // sanity check
+        create_post();
+    });
+    var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+    function create_post() {
+        console.log("create post is working!") // sanity check
+        var formData = $("#har_form").serializeArray()
+        
+    $.ajax({
+        url : "{% url 'subscribers:nuevo' %}", // the endpoint
+        type : "POST", // http method
+        
+        data : formData,/*{ 
+            name : $('#id_nombre').val(),
+            email : $('#id_email').val(),
+            pais : $('#id_pais').val(),
+            ciudad : $('#id_ciudad').val(),
+            'csrfmiddlewaretoken': csrftoken,
+        },*/ // data sent with the post request
+        // handle a successful response
+        success : function(json) {
+            $.magnificPopup.open({
+                          items: {
+                            src: '<div id="small-dialog" class="zoom-anim-dialog"><p>' + json.result + '.</p></div>', // can be a HTML string, jQuery object, or CSS selector
+                            type: 'inline',
+                            fixedContentPos: false,
+                    		fixedBgPos: true,
+                    
+                    		overflowY: 'auto',
+                    
+                    		closeBtnInside: true,
+                    		preloader: false,
+                    		
+                    		midClick: true,
+                    		removalDelay: 300,
+                    		mainClass: 'my-mfp-slide-bottom'
+                          }
+                        });
+            
+            console.log(json); // log the returned json to the console
+            console.log("success"); // another sanity check
+        },
+
+        // handle a non-successful response
+        error : function(xhr,errmsg,err) {
+            $.magnificPopup.open({
+                          items: {
+                            src: '<div id="small-dialog" class="zoom-anim-dialog"><p>' + errmsg + '.</p></div>', // can be a HTML string, jQuery object, or CSS selector
+                            type: 'inline',
+                            fixedContentPos: false,
+                    		fixedBgPos: true,
+                    
+                    		overflowY: 'auto',
+                    
+                    		closeBtnInside: true,
+                    		preloader: false,
+                    		
+                    		midClick: true,
+                    		removalDelay: 300,
+                    		mainClass: 'my-mfp-slide-bottom'
+                          }
+                        });
+        }
+    });
+    };
+    
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+    /*$('form').submit(function(){
+        var $inputs = $('form :input');
+
+        // get an associative array of objects.
+        var values = {};
+
+        $inputs.each(function() {
+            values[this.name] = $(this).val();
+        });
+        $.ajax({
+            url: '{% url "subscribers:validar_email" %}',
+            type: 'POST',
+            data: values,
+            dataType: 'json',
+            success: function (data) {
+                  if (data.is_taken) {
+                      $.magnificPopup.open({
+                          items: {
+                            src: '<div id="small-dialog" class="zoom-anim-dialog"><h1>Usuario Existente</h1><p>' + data.error_message + '.</p></div>', // can be a HTML string, jQuery object, or CSS selector
+                            type: 'inline',
+                            fixedContentPos: false,
+                    		fixedBgPos: true,
+                    
+                    		overflowY: 'auto',
+                    
+                    		closeBtnInside: true,
+                    		preloader: false,
+                    		
+                    		midClick: true,
+                    		removalDelay: 300,
+                    		mainClass: 'my-mfp-slide-bottom'
+                          }
+                        });
+                  }
+                }
+            }
+
+        });
+    }); */
+    
+
+</script>
+
+{% endblock %}

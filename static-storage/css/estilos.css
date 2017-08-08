@@ -1,0 +1,977 @@
+/* Gestion de colores */
+/* Letras
+Raleway = font-family: 'Raleway', sans-serif;
+Open Sans = font-family: 'Open Sans', sans-serif; */
+html {
+  font-size: 15px; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #111111; }
+
+.bienvenidos {
+  /* background: url("../images/watch-dogs-2-20166820154_1.jpg") no-repeat center top; */
+  background-color: #459FFF;
+  color: #FFFFEF;
+  background-size: cover;
+  background-attachment: fixed !important;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.encabezado {
+  background: #F05661;
+  color: #FFFFEF;
+  padding: .5rem 0; }
+
+.encabezado .container-fluid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.encabezado .logo img {
+  width: 150px;
+  height: auto; }
+
+/* Estilos para los botones */
+.boton-menu,
+.boton-facebook,
+.boton-twitter,
+.boton-youtube,
+.boton-spotify {
+  border: 0;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0 .5rem;
+  background: transparent;
+  color: #FFFFEF; }
+
+.boton-menu:focus,
+.boton-facebook:focus,
+.boton-twitter:focus,
+.boton-youtube:focus,
+.boton-spotify:focus {
+  outline: 0; }
+
+.boton-menu {
+  margin-left: auto; }
+
+#menu-principal {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%; }
+
+#menu-principal ul {
+  padding: 0;
+  list-style: none; }
+
+#menu-principal ul li {
+  /* border-top: 1px solid $hueso; */
+  padding: .5rem 0;
+  text-align: center; }
+
+#menu-principal ul li .item {
+  display: block;
+  color: #FFFFEF;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+#menu-principal ul li .item:hover,
+#menu-principal ul li.active .item,
+#menu-principal ul li .social:hover {
+  color: #111111;
+  font-weight: bold; }
+
+#menu-principal ul li .social {
+  margin: 0 .5rem;
+  text-decoration: none; }
+
+.texto-encabezado {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.flecha-bajar a {
+  display: inline-block;
+  color: #000;
+  font-size: 4rem;
+  -webkit-animation: flecha-animada 1.5s ease-in-out infinite;
+          animation: flecha-animada 1.5s ease-in-out infinite; }
+
+@-webkit-keyframes flecha-animada {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes flecha-animada {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+.display-4 {
+  /* font-size: 5rem; */ }
+
+/* Section video */
+.video {
+  background: #FFFFEF; }
+
+.video .container {
+  /* height: 60vh; */
+  display: block; }
+
+.video .container h3 {
+  margin: 2rem 0; }
+
+.video .container .row {
+  margin: 1rem 0;
+  position: relative;
+  padding-bottom: 52.50%;
+  /* 16: 9 */
+  padding-top: 25px;
+  height: 0; }
+
+.video .container .row .col-12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* Section disco */
+.disco {
+  padding: 1rem 0;
+  min-height: 70vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.texto-disco .info-general,
+.texto-disco .titulo-disco {
+  margin: 1rem 0; }
+
+.texto-disco .link-titulo-disco {
+  color: #111111;
+  text-decoration: none; }
+
+.texto-disco .link-titulo-disco:hover,
+.texto-disco .link-titulo-disco:focus,
+.texto-disco .link-titulo-disco:active {
+  text-decoration: none; }
+
+.texto-disco .btn {
+  margin: 1rem 0;
+  background: #F05661;
+  border: 0;
+  color: #FFFFEF; }
+
+.texto-disco .btn:focus {
+  border-color: transparent;
+  box-shadow: none; }
+
+.texto-disco .imagen-disco .image {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%; }
+
+.imagen-disco .image img {
+  /* background: url("../images/watch-dogs-2-20166820154_1.jpg") no-repeat center top; */
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.disco .container .boton-disco {
+  margin: 4rem 0;
+  text-align: center; }
+
+/* Section Calendario */
+.calendario {
+  min-height: 30vh;
+  padding: 1rem 0; }
+
+.calendario a {
+  text-decoration: none; }
+
+.calendario a h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #111111; }
+
+.calendario .container {
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%; }
+
+.calendario .container .owl-carousel {
+  margin: 2rem 0;
+  padding: 1rem 0; }
+
+.calendario .container .owl-carousel p {
+  padding: 1rem 0;
+  font-size: 1rem;
+  text-align: center;
+  color: #111111; }
+
+.calendario .owl-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: .3rem 0; }
+
+.calendario .owl-prev,
+.calendario .owl-next {
+  font-size: 3rem;
+  margin: 0 .5rem;
+  color: #F05661;
+  -webkit-transition: all .5s ease;
+          transition: all .5s ease; }
+
+.calendario .owl-prev:hover,
+.calendario .owl-next:hover {
+  color: #FFE8B8; }
+
+/* Footer */
+.footer {
+  background: #111111;
+  color: #FFFFEF; }
+
+.footer .logo-footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 2rem 0; }
+
+.footer .logo-footer .contenedor-logo-footer {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  text-align: center; }
+
+.footer .logo-footer .contenedor-logo-footer .a-logo-footer img {
+  width: 250px;
+  height: auto; }
+
+.footer .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.bloque-suscribete {
+  border-top: 0.1rem solid #F05661;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  padding: 2rem 0; }
+
+.contenedor-bloque-suscribete {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2rem;
+  margin: 1rem 0; }
+
+.contenedor-bloque-suscribete input[type="email"] {
+  border: 0;
+  border-radius: 3px 0 0 3px;
+  padding: 0 0 0 1rem;
+  width: calc(100% - 112px); }
+
+.contenedor-bloque-suscribete input[type="submit"] {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  background: #F05661;
+  color: #FFFFEF; }
+
+.creditos {
+  font-size: .8rem;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  text-align: center; }
+
+.creditos ul {
+  list-style: none;
+  padding: 0; }
+
+.creditos a {
+  color: #FFFFEF;
+  text-decoration: none; }
+
+.creditos a:hover,
+.creditos a:focus,
+.creditos a:active {
+  text-decoration: none;
+  font-weight: bold; }
+
+.arriba {
+  position: fixed;
+  bottom: 1rem;
+  right: 0.8rem;
+  font-size: 3rem;
+  color: #F05661;
+  text-decoration: none;
+  z-index: 99999;
+  opacity: 0.7;
+  line-height: 0;
+  display: none;
+  -webkit-transition: all .5s ease;
+          transition: all .5s ease; }
+
+.arriba:hover,
+.arriba:focus {
+  outline: 0;
+  color: #F05661;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 1; }
+
+/*---------------------------
+Discos
+---------------------------*/
+.discografia {
+  margin: 2rem 0; }
+
+.disco-container {
+  padding: 0; }
+
+.disco-info {
+  position: relative;
+  margin: 0.5rem;
+  padding-bottom: 100%; }
+
+.disco .info-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.disco .informacion {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.disco-info a {
+  text-decoration: none; }
+
+.disco-info a:hover,
+.disco-info a:active {
+  text-decoration: none;
+  color: #111111; }
+
+.disco-info img {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.disco-info .texto {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(240, 86, 97, 0.78); }
+
+.disco-info:hover .texto {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+/*---------------------------
+Calendario
+---------------------------*/
+.calendarioComp {
+  padding: 3rem 0; }
+
+.calendarioComp .link-evento,
+.calendarioComp .link-evento:hover {
+  text-decoration: none;
+  color: #111111; }
+
+.calendarioComp .link-row:hover {
+  background: rgba(240, 86, 97, 0.78); }
+
+.calendarioComp .link-row {
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: solid .1rem black; }
+
+/*---------------------------
+Contacto
+---------------------------*/
+.contacto {
+  padding: 3rem 0; }
+
+.contacto form {
+  max-width: 700px;
+  margin: 0 auto; }
+
+.contacto form input,
+.contacto form select,
+.contacto form textarea {
+  border: 0.2rem solid #F05661;
+  padding: 0.3rem;
+  width: 100%; }
+
+.contacto form select {
+  padding: 0.42rem 0; }
+
+.contacto form input:focus,
+.contacto form select:focus,
+.contacto form textarea:focus {
+  outline: none;
+  border-color: #f4989e; }
+
+.contacto form label {
+  display: block;
+  margin-bottom: 1rem; }
+
+.contacto form label span {
+  display: block; }
+
+.contacto form .info_contacto label {
+  width: 100%; }
+
+.contacto form .boton_enviar {
+  text-align: right; }
+
+.contacto form .boton {
+  background: #F05661;
+  color: #FFFFEF;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  width: 33%; }
+
+.contacto form .boton:hover {
+  background: #f4989e; }
+
+/*---------------------------
+Gracias
+---------------------------*/
+.gracias_mensaje {
+  margin: 3rem 0; }
+
+.gracias_mensaje .mensaje p {
+  text-align: center; }
+  
+  
+  
+  #small-dialog {
+	background: #F05661;
+	color:white;
+	padding: 20px 30px;
+	text-align: left;
+	max-width: 400px;
+	margin: 40px auto;
+	position: relative;
+}
+
+/* at start */
+.my-mfp-slide-bottom .zoom-anim-dialog {
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+
+	-webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+	-moz-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+	-ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+	-o-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+	opacity: 1;
+	-webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+	-moz-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+	-ms-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+	-o-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+	transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+	opacity: 0;
+
+	-webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+	-moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+	-ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+	-o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+}
+
+/* Dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg {
+	opacity: 0;
+
+	-webkit-transition: opacity 0.3s ease-out; 
+	-moz-transition: opacity 0.3s ease-out; 
+	-o-transition: opacity 0.3s ease-out; 
+	transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+  
+  
+  
+  
+
+/*-------------------------------------------------------------
+Media Queries
+--------------------------------------------------------------*/
+@media (min-width: 470px) {
+  /*---------------------------
+  Imagen Disco
+  ----------------------------*/
+  .texto-disco .imagen-disco .image {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 420px; }
+
+  .imagen-disco .image img {
+    /* background: url("../images/watch-dogs-2-20166820154_1.jpg") no-repeat center top; */
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 420px;
+    height: 100%; } }
+@media (min-width: 768px) {
+  html {
+    font-size: 17px; }
+
+  /*---------------------------
+  Imagen Disco
+  ----------------------------*/
+  .texto-disco .imagen-disco .image {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100%; }
+
+  .imagen-disco .image img {
+    /* background: url("../images/watch-dogs-2-20166820154_1.jpg") no-repeat center top; */
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+
+  /*---------------------------
+  Footer
+  ----------------------------*/
+  .contenedor-bloque-suscribete {
+    margin: 1rem auto;
+    width: 510px; } }
+@media (min-width: 992px) {
+  /*---------------------------
+  Header
+  ----------------------------*/
+  .encabezado {
+    background: transparent !important;
+    padding: 2rem 0 0 0;
+    -webkit-transition: all .5s ease;
+            transition: all .5s ease; }
+
+  .fondo-menu {
+    padding: 0;
+    background: #F05661 !important; }
+
+  #menu-principal {
+    height: auto !important;
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    margin-left: auto;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1; }
+
+  #menu-principal ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0 0 0; }
+
+  #menu-principal ul li .item {
+    padding: .8rem 0.4rem;
+    text-transform: capitalize;
+    margin: 0 .3rem;
+    border-top: 0px;
+    border-bottom: 4px solid transparent;
+    -webkit-transition: all .5s ease;
+            transition: all .5s ease; }
+
+  #menu-principal ul li .social {
+    padding: 0 0.4rem;
+    text-decoration: none; }
+
+  #menu-principal ul li.active .item,
+  #menu-principal ul li .item:hover,
+  #menu-principal ul li .social:hover {
+    color: #111111;
+    font-weight: bold;
+    border-bottom: 4px solid; }
+
+  /*---------------------------
+  Seccion Video
+  ----------------------------*/
+  .video .container .row {
+    margin: 1rem 0;
+    position: relative;
+    padding-bottom: 366px;
+    /* 16: 9 */
+    padding-top: 25px;
+    height: 0; }
+
+  .video .container .row .col-12 {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 692px;
+    height: 100%; }
+
+  /*---------------------------
+  Imagen Disco
+  ----------------------------*/
+  .texto-disco .imagen-disco .image {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 420px; }
+
+  .imagen-disco .image img {
+    /* background: url("../images/watch-dogs-2-20166820154_1.jpg") no-repeat center top; */
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 420px;
+    height: 100%; }
+
+
+
+
+
+
+  /*---------------------------
+  Footer
+  ----------------------------*/
+  .footer .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    border-top: 0.1rem solid #F05661;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; }
+
+  .bloque-suscribete {
+    border-top: 0.1rem solid transparent;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 50%;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    padding: 2rem 0; }
+
+  .creditos {
+    font-size: .8rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 50%;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    text-align: center;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; } }
+@media (min-width: 1200px) {
+  html {
+    font-size: large; }
+
+  /*---------------------------
+  Header
+  ----------------------------*/
+  .encabezado .container-fluid {
+    max-width: 1200px; } }
+@media (min-width: 2000px) {
+  html {
+    font-size: x-large; }
+
+  /*---------------------------
+  Header
+  ----------------------------*/
+  .encabezado .container-fluid {
+    max-width: 1600px; }
+
+  .encabezado .logo img {
+    width: 250px;
+    height: auto; }
+
+  /*---------------------------
+  Seccion Video
+  ----------------------------*/
+  .video .container .row {
+    margin: 1rem 0;
+    position: relative;
+    padding-bottom: 586px;
+    /* 16: 9 */
+    padding-top: 25px;
+    height: 0; }
+
+  .video .container .row .col-12 {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 1080px;
+    height: 100%; }
+
+  /*---------------------------
+  Imagen Disco
+  ----------------------------*/
+  .texto-disco .imagen-disco .image {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 500px; }
+
+  .imagen-disco .image img {
+    /* background: url("../images/watch-dogs-2-20166820154_1.jpg") no-repeat center top; */
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 100%; }
+
+  /*---------------------------
+  Container
+  ----------------------------*/
+  .container {
+    width: 1600px; }
+
+  .footer .logo-footer .contenedor-logo-footer .a-logo-footer img {
+    width: 350px;
+    height: auto; }
+
+  .contenedor-bloque-suscribete {
+    margin: 1rem auto;
+    width: 600px; } }
+@media (min-width: 4000px) {
+  html {
+    font-size: 40px; }
+
+  /*---------------------------
+  Header
+  ----------------------------*/
+  .encabezado .container-fluid {
+    max-width: 2500px; }
+
+  .encabezado .logo img {
+    width: 350px;
+    height: auto; }
+
+  /*---------------------------
+  Seccion Video
+  ----------------------------*/
+  .video .container .row {
+    margin: 1rem 0;
+    position: relative;
+    padding-bottom: 1426px;
+    /* 16: 9 */
+    padding-top: 25px;
+    height: 0; }
+
+  .video .container .row .col-12 {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 2568px;
+    height: 100%; }
+
+  /*---------------------------
+  Imagen Disco
+  ----------------------------*/
+  .texto-disco .imagen-disco .image {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 700px; }
+
+  .imagen-disco .image img {
+    /* background: url("../images/watch-dogs-2-20166820154_1.jpg") no-repeat center top; */
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 700px;
+    height: 100%; }
+
+  /*---------------------------
+  Container
+  ----------------------------*/
+  .container {
+    width: 2500px; }
+
+  /*---------------------------
+  Footer
+  ----------------------------*/
+  .footer .logo-footer .contenedor-logo-footer .a-logo-footer img {
+    width: 450px;
+    height: auto; }
+
+  .contenedor-bloque-suscribete {
+    margin: 1rem auto;
+    width: 800px; }
+
+  /*---------------------------
+  Contacto
+  ---------------------------*/
+  .contacto form {
+    max-width: 2000px;
+    margin: 0 auto; } }
+
+/*# sourceMappingURL=estilos.css.map */

@@ -1,0 +1,14 @@
+{% extends "header.html" %} {% block style %}
+<!-- Carga de Galeria de imágenes -->
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/animate.min.css' %}"> {% endblock %} {% block content %} {% include "includes/menu.html" %}
+
+{% include "includes/imagen-titulo.html" %}
+
+
+<main class="info-evento" id="importante">
+    <article class="texto-disco">
+
+    </article>
+</main>
+ {% include "includes/footer.html" %} {%endblock%} {% block js %} {% endblock %}

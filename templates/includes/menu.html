@@ -1,0 +1,44 @@
+{% block content %}
+<!-- Header -->
+<header>       
+
+    <nav class="har_light_nav har_transp_nav">
+        <div class="container">
+
+            <!-- Logo -->
+            <a href="/" class="har_logo">
+                {% load static %}
+                <img id="logo_menu" src="{% static 'icons/lalala-logo.svg' %}" alt="Logo Lalalá">
+            </a>
+            <!-- Logo End-->
+        <div class="har_top_menu_mobile_link">
+            <i class="ti ti-menu"></i>
+        </div>
+        <!-- Top Menu -->
+            <div class="har_top_menu_cont">
+                <ul class="har_top_menu">
+                    {% with request.resolver_match.url_name as url_name %}
+                    <li class="har_parent"><a href="/">Inicio</a>
+                    </li>
+                    <li class="har_parent"><a href="/discos/">Discografía</a>
+                    </li>
+                    <li class="har_parent"><a href="/biografia/">Biografía</a>
+                    </li>
+                    <li class="har_parent"><a href="/calendario/">Calendario</a>
+                    </li>    
+                    <li class="har_parent"><a href="/prensa/">Prensa</a>
+                    </li>
+                    <li class="har_parent"><a href="/contacto/">Contacto</a>
+                    </li>
+                    {% endwith %}
+                </ul>
+            </div>
+            <!-- Top Menu End -->
+
+        </div>
+        <!-- container end -->
+    </nav>
+
+</header>
+<!-- Header End -->
+{%endblock%}

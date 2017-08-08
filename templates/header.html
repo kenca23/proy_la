@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>{{ title }}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> {% load static %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'icons/favicon.ico' %}">
+
+    <!-- Cargar Letras -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700,700i" rel="stylesheet">
+
+    <!-- Cargar Iconos -->
+    <script src="https://use.fontawesome.com/0a5ab0004d.js"></script>
+    <!-- Library CSS -->
+    <link href="{% static 'css/harmony_library.css' %}" rel="stylesheet">
+    <link href="{% static 'css/jquery.mb.YTPlayer.min.css' %}" media="all" rel="stylesheet" type="text/css">
+    
+    <!-- Icons CSS -->
+    <link href="{% static 'fonts/themify-icons.css' %}" rel="stylesheet">
+    
+    <!-- Theme CSS -->
+    <link href="{% static 'css/harmony_style.css' %}" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    
+    {% block style %} {% endblock %}
+    <!-- Carga de Galeria de imágenes
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.min.css"> -->
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
+
+    <!-- Cargar Estilos -->
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/estilos.css"> -->
+</head>
+
+<body class="har_middle_titles">
+    {% load static %}
+    
+    {% include "includes/preloader.html" %}
+
+    <!-- Page -->
+    <div class="har_page" id="har_page">
+
+        <!-- To Top -->
+        <a href="#har_page" class="har_top fa fa-chevron-circle-up har_go"></a>
+        {% block content %} {% endblock %}
+    </div>
+    <!-- Page End -->
+    
+    
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    
+    <script src="{% static 'js/jquery-1.12.3.min.js' %}"></script> 
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js " integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb " crossorigin="anonymous "></script>
+    <!--<script src="{% static 'js/library/bootstrap.min.js' %}" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn " crossorigin="anonymous "></script>-->
+
+
+    {% block js %} {% endblock %} {% load static %}
+    <script type="text/javascript" src="{% static 'js/wow.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/smooth-scroll.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/sitio.js' %}"></script>
+    <!-- <script src="js/wow.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/sitio.js"></script> -->
+    <script src="{% static 'js/jquery.firefly-0.2.min.js' %}"></script> 
+    
+    <script src="{% static 'js/harmony_library.js' %}"></script> 
+    <script src="{% static 'js/library/jquery.lettering.js' %}"></script> 
+    <script src="{% static 'js/jquery.mb.YTPlayer.min.js' %}"></script> 
+    
+    <!-- Theme JS -->
+    <script src="{% static 'js/harmony_script.js' %}"></script>
+    
+
+    
+</body>
+
+</html>
