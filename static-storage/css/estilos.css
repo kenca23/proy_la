@@ -536,6 +536,25 @@ Discos
   font-weight: bold;
 }
 
+.card{
+  margin: 0.5rem 1.5rem;
+  border-bottom: 0.5px solid rgba(69,74,77,0.2);
+}
+
+.card .card_link{
+  color:black;
+}
+
+.card .card_link:hover, .card .card_link:focus, .card .card_link:active{
+  outline:none;
+  text-decoration:none;
+  color:#F05661;
+}
+
+.card .titulo_cancion_DC{
+  font-size:1.3rem;
+  font-weight: bold;
+}
 
 /*---------------------------
 Calendario
