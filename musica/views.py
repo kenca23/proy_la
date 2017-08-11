@@ -3,22 +3,22 @@ from django.views import View
 from django.http import HttpResponse, HttpResponseRedirect
 
 # Import Tabla Disco de la base de datos
-from .models import Disco, Cancion
+from .models import Disco, Cancion, Ficha_Tecnica
 
 class DiscoCompletoView(View):
     def get(self, request, nombDisco=None, *args, **kwargs):
         disco = get_object_or_404(Disco, nombDisco=nombDisco)
         canciones = Cancion.objects.filter(disco=disco.id).order_by('numero')
+        ficha_tecnica = Ficha_Tecnica.objects.filter(disco=disco.id)
         
         nombreDisco = disco.nombre
         content = {
             'title' : 'Lalalá | {sc}'.format(sc=nombreDisco),
             'titulo': '{sc}'.format(sc=nombreDisco),
             'disco' : disco,
-            'canciones' : canciones
+            'canciones' : canciones,
+            'fichas_tecnicas' : ficha_tecnica
         }
-        print(disco)
-        print(canciones)
         return render(request, "discoCompleto.html", content)  
 		
 
@@ -29,7 +29,6 @@ def DiscoView(request):
         'titulo': 'Discografía',
         'object_list' : queryset,
     }
-    print(queryset)
     return render(request, "discografia.html", content)  
 
 

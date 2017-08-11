@@ -9,7 +9,7 @@
     <article class="container">
         <div class="row">
             {% for obj in object_list %}
-            <div class="disco-container col-12 col-md-6 col-lg-4">
+            <div class="disco-container col-xs-12 col-sm-6 col-md-4">
                 <div class="disco-info">
                     <a href="/discos/{{obj.nombDisco}}">
                         <img src="{{ MEDIA_URL }}{{ obj.imagen.url }}" alt="{{obj.nombre}}" />

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # This Python file uses the following encoding: utf-8
 from django.db import models
+from django.db.models.signals import pre_save
 
 # Create your models here.
 
@@ -12,7 +13,6 @@ class Disco(models.Model):
     nombre_banda = models.CharField(max_length=15,default="Lalalá")
     integrantes= models.CharField(max_length=50,default="Kevin Calvo, Kenneth Calvo, Roberto Cruz")
     info= models.TextField()
-    ficha_tecnica= models.TextField()
     imagen = models.ImageField(upload_to='media/Discos/')
 
     def __str__(self):
@@ -20,6 +20,7 @@ class Disco(models.Model):
 
     def __unicode__(self):
         return str(self.nombre)
+
 
 
 class Cancion(models.Model):
@@ -35,3 +36,16 @@ class Cancion(models.Model):
 
 	def __unicode__(self):
 		return str(self.nombre)
+	
+
+class Ficha_Tecnica(models.Model):
+    disco = models.ForeignKey(Disco)
+    nombre = models.CharField(max_length=30, )
+    valor= models.TextField()
+    
+    def __str__(self):
+        return str(self.nombre + ' : ' + self.valor)
+
+    def __unicode__(self):
+        return str(self.nombre + ' : ' + self.valor)
+		

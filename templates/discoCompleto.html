@@ -11,23 +11,31 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-12 col-md-6">
+                <div class="col-md-6">
                     <div class="image">
                         <img src="{{ MEDIA_URL }}{{ disco.imagen.url }}" class="img img-responsive full-width" alt="Imagen Disco {{disco.nombre}}">
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 wow bounce info-container">
-                    <h3 class="text-center font-weight-bold titulo-disco">{{disco.nombre}}</h3>
+                <div class="col-md-6 wow bounce info-container">
                     <div class="informacion">
-                        <p class="info-general">{{disco.anno}} | {{disco.nombre_banda}}</p>
-                        <p class="info-general">{{disco.integrantes}}</p>
-                        <p class="info-general">{{disco.info}}</p>
+                        <div class="anno_banda">
+                            <p class="info-general">Año : <span class="bold">{{disco.anno}}</span></p>
+                            <div class="banda">
+                                <p class="info-general">{{disco.nombre_banda}}</br><span class="bold">{{disco.integrantes}}</span></p>
+                            </div>
+                        </div>
+                        <div class="info_general_div">
+                            <p class="info-general">{{disco.info}}</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="row padding-top-2">
 
-                <div class="col-12 col-md-6 wow bounce info-container">
+                <div class="col-xs-12 col-md-6 wow bounce info-container">
                     <div id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="titulo_disco_completo">Letras</div>
                         {% for obj in canciones %}
 
 
@@ -43,11 +51,26 @@
 
                             <div id="collapse{{ forloop.counter }}" class="collapse" role="tabpanel" aria-labelledby="heading{{ forloop.counter }}">
                                 <div class="card-block">
-                                    {{obj.letra}}
+                                    <p id="letra_cancion">
+                                        {{obj.letra|linebreaksbr}} <!-- {{value|linebreaksbr}} -->
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6 ficha_tecnica">
+                    <div class="titulo_disco_completo">Ficha Tecnica</div>
+                    <div class="contenido_ficha_tecnica">
+                        {% for ficha_tecnica in fichas_tecnicas %}
+                            <div class="item_ficha_tecnica">
+                                <span class="nombre"> {{ ficha_tecnica.nombre }} </span>
+                                <div class="valores">
+                                    {{ ficha_tecnica.valor|linebreaksbr}}
+                                </div>
+                            </div>
                         {% endfor %}
                     </div>
                 </div>
@@ -56,4 +79,15 @@
 
     </article>
 </main>
-{% include "includes/footer.html" %} {%endblock%} {% block js %} {% endblock %}
+{% include "includes/footer.html" %} {%endblock%} 
+{% block js %}
+
+<script type="text/javascript">
+$( window ).on( "load", function() {
+    var letra = $("#letra_cancion");
+    
+    console.log(letra.text());
+});
+
+</script>
+{% endblock %}
