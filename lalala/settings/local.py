@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'musica',
     'eventos',
     'subscriber',
+    'shared',
 ]
 
 MIDDLEWARE = [

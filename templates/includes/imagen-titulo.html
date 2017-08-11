@@ -1,29 +1,38 @@
 {% block content %}
-<!-- Slider -->
+<!-- Slider
 <div class="har_slider_carousel har_slider_txt_animation">
 
-    <!-- Item -->
+    <!-- Item 
     <div class="har_slider har_wht_txt">
 
         <div class="har_slider_img har_image_bck" data-image="http://placehold.it/1400x900"></div>
 
-        <!-- Over -->
+        <!-- Over 
         <div class="har_over" data-color="#000" data-opacity="0"></div>
 
 
 
-        <!-- Slider Texts -->
+        <!-- Slider Texts 
         <div class="container">
             <div class="har_slide_txt har_slide_left_middle text-left" data-0="opacity:1; margin-top:0px" data--400-bottom="opacity:0; margin-top:-100px">
                 <div class="har_slide_title">{{ titulo }}</div>
             </div> 
         </div>
-        <!-- Slider Texts End -->
-     <!-- container end -->
+        <!-- Slider Texts End 
+     <!-- container end 
     </div>
 
 
 </div>
 <!-- carousel end -->
 <!-- Slider End -->
+{% load static %}
+<section class="bienvenidos" style="background: url('{% get_media_prefix %}{{ imagen }}')">
+    <div class="texto-encabezado text-center">
+        <div class="container">
+            <h1 class="display-4">{{ titulo }}</h1>
+        </div>
+    </div>
+</section>
+
 {%endblock%}

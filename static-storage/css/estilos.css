@@ -19,12 +19,15 @@ body {
   
 
 .bienvenidos {
+  height: 70vh;
+  /*background-color: #459FFF;*/
   /* background: url("../images/watch-dogs-2-20166820154_1.jpg") no-repeat center top; */
-  background-color: #459FFF;
   color: #FFFFEF;
-  background-size: cover;
   background-attachment: fixed !important;
-  height: 100vh;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+  
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -154,8 +157,12 @@ body {
     -webkit-transform: translateY(0);
             transform: translateY(0); } }
 .display-4 {
-  /* font-size: 5rem; */ }
-
+  font-size: 3rem; 
+  margin-left: 2rem;
+  margin-right: 2rem; 
+  
+}
+   
 /* Section video */
 .video {
   background: #FFFFEF; }
@@ -510,6 +517,11 @@ Discos
   padding-top: 0.5rem ;
   padding-bottom: 0.5rem ;
 }
+
+.texto-disco .image{
+  margin-top: -50px
+}
+
 .texto-disco .image img{
   margin: 0 auto;
 }
@@ -730,6 +742,9 @@ Media Queries
   html {
     font-size: 17px !important; }
 
+  .texto-disco .image{
+    margin-top: -20px
+  }
   /*---------------------------
   Imagen Disco
   ----------------------------*/
@@ -754,6 +769,12 @@ Media Queries
   /*---------------------------
   Header
   ----------------------------*/
+  .bienvenidos {
+    height: 50vh;
+  }
+  .texto-disco .image {
+    margin-top: -70px;
+  }
   .encabezado {
     background: transparent !important;
     padding: 2rem 0 0 0;

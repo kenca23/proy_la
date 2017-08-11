@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import datetime
+from django.db.models import Q
 
 
 from django.core.mail import EmailMessage
@@ -15,6 +16,7 @@ from musica.models import Disco
 from eventos.models import Evento
 from .forms import ContactForm
 from subscriber.forms import SubscriberForm
+from shared.models import Imagen_Pagina
 
 def home(request):
     queryset = Disco.objects.all().order_by('-id')[:3]
@@ -33,27 +35,27 @@ def home(request):
 
 
 def Biografia(request):
-	queryset = Disco.objects.all().order_by('-id')[:1]
-	querysetEv = Evento.objects.filter(fecha__gte=datetime.datetime.today().date()).order_by('fecha')[:6]
+	today = datetime.datetime.today()
+	imagen = Imagen_Pagina.objects.filter(Q(fecha__lte=today) & Q(nombre='BIO')).order_by('-fecha').first()
+	
+	urlImagen = imagen.imagen
 	content = {
 	'title' : 'Lalalá | Página Oficial',
         'titulo': 'Biografía',
-	'object_list' : queryset,
-	'evento' : querysetEv
+	'imagen' : urlImagen,
 	}
-	print(queryset)
 	return render(request, "biografia.html", content)  
 
 def Prensa(request):
-	queryset = Disco.objects.all().order_by('-id')[:1]
-	querysetEv = Evento.objects.filter(fecha__gte=datetime.datetime.today().date()).order_by('fecha')[:6]
+	today = datetime.datetime.today()
+	imagen = Imagen_Pagina.objects.filter(Q(fecha__lte=today) & Q(nombre='PRE')).order_by('-fecha').first()
+	
+	urlImagen = imagen.imagen
 	content = {
 	'title' : 'Lalalá | Página Oficial',
         'titulo': 'Prensa',
-	'object_list' : queryset,
-	'evento' : querysetEv
+	'imagen' : urlImagen,
 	}
-	print(queryset)
 	return render(request, "prensa.html", content) 
 
 def Contacto(request):
@@ -108,10 +110,15 @@ def Contacto(request):
             
             #
     else:
+        today = datetime.datetime.today()
+        imagen = Imagen_Pagina.objects.filter(Q(fecha__lte=today) & Q(nombre='CON')).order_by('-fecha').first()
+        
+        urlImagen = imagen.imagen
         content = {
             'title' : 'Lalalá | Contacto',
             'titulo': 'Contacto',
-            'form' : form_class
+            'form' : form_class,
+            'imagen' : urlImagen
         }
         
     print(form_class)
@@ -120,11 +127,16 @@ def Contacto(request):
 
 class Gracias(View):
     def get(self, request,nombre=None, *args, **kwargs):
+        today = datetime.datetime.today()
+        imagen = Imagen_Pagina.objects.filter(Q(fecha__lte=today) & Q(nombre='GRA')).order_by('-fecha').first()
+        
+        urlImagen = imagen.imagen
         print(nombre)
         content = {
             'title' : 'Gracias',
             'titulo': 'Gracias, ' + nombre,
-            'nombre' : nombre
+            'nombre' : nombre,
+            'imagen' : urlImagen
         }
         
         return render(request, "gracias.html", content)  

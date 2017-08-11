@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 # This Python file uses the following encoding: utf-8
 from django.db import models
-from django.db.models.signals import pre_save
 
 # Create your models here.
 
@@ -14,6 +13,7 @@ class Disco(models.Model):
     integrantes= models.CharField(max_length=50,default="Kevin Calvo, Kenneth Calvo, Roberto Cruz")
     info= models.TextField()
     imagen = models.ImageField(upload_to='media/Discos/')
+    imagen_grande = models.ImageField(upload_to='media/Discos/')
 
     def __str__(self):
         return str(self.nombre)
