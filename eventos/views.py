@@ -11,10 +11,15 @@ from shared.models import Imagen_Pagina
 class InfoEvento(View):
     def get(self, request, evento=None, *args, **kwargs):
         eventoI = Evento.objects.get(linkEvento=evento)
+        today = datetime.datetime.today()
+        imagen = Imagen_Pagina.objects.filter(Q(fecha__lte=today) & Q(nombre='GRA')).order_by('-fecha').first()
+        
+        urlImagen = imagen.imagen
         content = {
             'title' : 'Lalalá | {sc}'.format(sc=eventoI.titulo),
             'titulo': '{sc}'.format(sc=eventoI.titulo),
-            'object_list' : eventoI,
+            'evento' : eventoI,
+            'imagen' : urlImagen,
         }
         return render(request, "infoEvento.html", content)  
 		

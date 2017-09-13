@@ -3703,18 +3703,14 @@ left:-10%;
 .har_team_slider .owl-pagination {
 	margin: 40px 0 0;
 }
-	.har_shop_al_item_bl:hover .har_shop_item_cover {
-		margin-left: 0;
-	}
+	
 	.har_shop_al_item_bl:hover .har_shop_item_env {
 		right: 115px;
 	}
 	.har_shop_al_item_bl:hover .har_shop_item_vinyl {
 		right: 0px;
 	}
-	.har_shop_al_item_bl:hover .har_shop_al_item:after {
-		left: -50px;
-	}
+	
 .har_shop_item_cover {
 	width: 250px;
 	height: 243px;
@@ -3727,22 +3723,6 @@ left:-10%;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 	border: 1px solid #A6A6A6;
-}
-.har_shop_al_item:after {
-	display: block;
-	content: '';
-	position: absolute;
-	background: url(../images/cover_sh.png);
-	width: 380px;
-	height: 62px;
-	top: 203px;
-	z-index: -1;
-	left: 10px;
-	-webkit-background-size: cover;
-	background-size: cover;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
 }
 .har_shop_item_env {
 	background: url(../images/env.png);
@@ -3804,14 +3784,21 @@ left:-10%;
 	display: block;
 	margin: 10px 0 15px;
 }
+.har_shop_al_item2 {
+    display: block;
+    /* width: 380px; */
+    position: relative;
+    margin: 20px auto;
+}
 
-.har_shop_al_item_bl h4 {
-	margin: 42px 0 0;
+.har_shop_al_item_bl h4, .har_shop_al_item2 h4  {
+	margin: 12px 0 0;
 	font-size: 24px;
 	font-weight: bold;
 	text-transform: uppercase;
+	text-align: center;
 }
-.har_shop_al_item_bl h4:after {
+.har_shop_al_item_bl h4:after{
 	width: 100px;
 	display: block;
 	content: '';
@@ -3823,6 +3810,7 @@ left:-10%;
 	text-transform: uppercase;
 	font-size: 12px;
 	font-weight: bold;
+	text-align: center;
 }
 .har_shop_soc  {
 margin-left: 10px;
@@ -6122,11 +6110,6 @@ left:15%;
 .har_without_after .trak-item .name-artist h3 {
 	font-size: 12px;
 }
-.har_without_after .har_gradient_bckg .har_slider_dick_left .har_shop_al_item:after,
-.har_without_after .har_gradient_bckg_2 .har_slider_dick_left .har_shop_al_item:after {
- display: none;
-}
-}
 @media (max-width: 1200px) {
 	/*Shop playlist*/
 .playlist-wrapper.har_shop_player .trak-item .additional-button {
@@ -6351,9 +6334,6 @@ left:15%;
 	margin-left: 23px;
 }
 
-.har_shop_al_item_bl:hover .har_shop_al_item:after {
-	left: 10px;
-}
 
 .har_logo_eq {
 	top: 6px;

@@ -1,8 +1,55 @@
 {% extends "header.html" %} {% block style %}
 <!-- Carga de Galeria de imágenes -->
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/animate.min.css' %}"> {% endblock %} {% block content %} {% include "includes/menu.html" %}
+<link rel="stylesheet" href="{% static 'css/animate.min.css' %}"> {% endblock %}
+
+
+{% block content %} {% include "includes/menu.html" %}
 {% include "includes/imagen-titulo.html" %}
+
+<!--
+<main class="container sencillos py-1" id="importante">
+    
+    
+    <div class="owl-carousel owl-theme owl-loaded owl-drag">
+
+       
+       {% for sencillo in sencillos %}
+       <div id="{{ forloop.counter0 }}" class="sencillo_div">
+            <a href="#" class="sencillo_imagen_a">
+                <span class="sencillo_imagen_span">
+                    <img class="sencillo_imagen" src="{{ MEDIA_URL }}{{ sencillo.imagen.url }}" alt="Imagen de sencillo {{sencillo.nombre}}">
+                </span>
+            </a>
+            <h4 class="sencillo_titulo">{{sencillo.nombre|title}}</h4>
+            <p class="sencillo_fecha">{{sencillo.fecha_salida}}</p>
+            
+        </div>
+        {% endfor %}
+        
+        
+    </div>
+    
+    <div class="sencillo_información">
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <h4>{{ sencillos.0.nombre }}</h4>
+            </div>
+            <div class="col-sm-12">
+                {{sencillos.0.info}}
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="compartir">
+        <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://lalala-oficial-kenca23.c9users.io/discos/&display=popup&ref=plugin&src=like&kid_directed_site=0&t=LalaláJade&amp;src=sdkpreparse" class="compartir popup">compartir</a>
+        <a target="_blank" href="http://twitter.com/share?url=https://lalala-oficial-kenca23.c9users.io/discos/&amp;text=Lalalá - Nuestra música" class="compartir popup">Tweet</a>
+    </div>
+
+    
+</main> -->
 
 
 <main class="discografia py-2" id="importante">
@@ -23,4 +70,7 @@
 
     </article>
 </main>
-{% include "includes/footer.html" %} {%endblock%} {% block js %} {% endblock %}
+{% include "includes/footer.html" %} {%endblock%} {% block js %}
+
+
+{% endblock %}

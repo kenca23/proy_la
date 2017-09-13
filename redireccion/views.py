@@ -11,6 +11,8 @@ class LalalaRedirect(View):
         print(kwargs)
         print("shortcode = {sc}".format(sc=shortcode))
         obj = get_object_or_404(redireccionamiento, shortcode=shortcode)
+        obj.visitas = obj.visitas + 1;
+        obj.save();
         return HttpResponseRedirect(obj.url)
 
 

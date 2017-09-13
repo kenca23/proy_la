@@ -10,6 +10,7 @@ class redireccionamiento (models.Model):
 	url 		= models.CharField(max_length=220, )
 	shortcode 	= models.CharField(max_length=SHORTCODE_MAX, unique=True )
 	fecha		= models.DateTimeField(auto_now=False, auto_now_add=False)
+	visitas 	= models.PositiveIntegerField(default=0);
 
 	def __str__(self):
 		return str(self.nombre)

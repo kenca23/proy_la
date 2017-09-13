@@ -11,6 +11,8 @@ class Evento(models.Model):
     facebook = models.URLField(max_length=200, )
     twitter = models.URLField(max_length=200, )
     texto = models.TextField()
+    imagen = models.ImageField(upload_to='media/Eventos/')
+    linkUbicacion = models.CharField(max_length=200,default="")
     
     def __str__(self):
         return str(self.titulo)

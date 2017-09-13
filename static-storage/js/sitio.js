@@ -209,3 +209,29 @@ $(function () {
     });
     
     
+window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '414955855568221',
+          xfbml      : true,
+          version    : 'v2.10'
+        });
+        FB.AppEvents.logPageView();
+      };
+    
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+       
+       
+       
+     var c = $(".popup");
+     c.on("click",function(a){
+         a.preventDefault();
+         var c=575,d=400,e=($(window).width()-c)/2,f=($(window).height()-d)/2,g="status=1"+",width="+c+",height="+d+",top="+f+",left="+e;
+         window.open(this.href,"compartir",g)
+         
+     });

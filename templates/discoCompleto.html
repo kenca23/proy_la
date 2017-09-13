@@ -1,9 +1,22 @@
 {% extends "header.html" %} {% block style %}
 <!-- Carga de Galeria de imágenes -->
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/animate.min.css' %}"> {% endblock %} {% block content %} {% include "includes/menu.html" %}
-{% include "includes/imagen-titulo.html" %}
+<link rel="stylesheet" href="{% static 'css/animate.min.css' %}"> {% endblock %}
 
+{% block meta %}
+    <meta property="og:url"           content="https://lalala-oficial-kenca23.c9users.io/discos/{{disco.nombDisco}}" />
+    <meta property="fb:app_id"          content="414955855568221" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Lalalá - {{disco.nombre}}" />
+    <meta property="og:description"   content="{{disco.info}}" />
+    <meta property="og:image:secure_url" content="https://lalala-oficial-kenca23.c9users.io{{ disco.imagen.url }}">
+    <meta property="og:image:type"       content="image/jpg">
+    <meta property="og:image:width"      content="400">
+    <meta property="og:image:height"     content="400">
+{% endblock %}
+
+{% block content %} {% include "includes/menu.html" %}
+{% include "includes/imagen-titulo.html" %}
 
 
 <main class="discoCompleto" id="importante">
@@ -17,7 +30,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 wow bounce info-container">
+                <div class="col-md-6 info-container">
                     <div class="informacion">
                         <div class="anno_banda">
                             <p class="info-general">Año : <span class="bold">{{disco.anno}}</span></p>
@@ -28,52 +41,98 @@
                         <div class="info_general_div">
                             <p class="info-general">{{disco.info}}</p>
                         </div>
+                        
                     </div>
                 </div>
             </div>
-            <div class="row padding-top-2">
-
-                <div class="col-xs-12 col-md-6 wow bounce info-container">
-                    <div id="accordion" role="tablist" aria-multiselectable="true">
-                        <div class="titulo_disco_completo">Letras</div>
-                        {% for obj in canciones %}
-
-
-                        <div class="card">
-                            <div class="card-header" role="tab" id="heading{{ forloop.counter }}">
-
-                                <a class="card_link" data-toggle="collapse" data-parent="#accordion" href="#collapse{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse{{ forloop.counter }}">
-                                    <span class="titulo_cancion_DC">{{obj.numero}} - {{obj.nombre}}</span></br>
-                                    <span class="musica_letra_DC">Música: {{obj.comp_musica}} | Letra: {{obj.comp_letra}}</span>
-                                </a>
-
+            </div>
+            <div class="container-fluid reproductor_disponible margin-top-2">
+                <div class="container">
+                    <div class="row reproductor_disponible_flex">
+                    <div class="col-xs-12 col-md-6 reproductor_spotify">
+                                <iframe src="https://open.spotify.com/embed?uri={{disco.playlist_spotify}}&theme=white" width="350" height="300" frameborder="0" allowtransparency="true"></iframe>
+                    </div>
+                    <div class="col-xs-12 col-md-6 disponible_en_div">
+                        
+                            <div class="disponible_content">
+                                <h4 class="disponible_titulo">
+                                    Disponible en:
+                                </h4>
+                                {% for disponible in disponible_en %}
+                                    <a href="{{disponible.link}}" class="disponible_link" target="blank">  
+                                    {% if disponible.plataforma == "Spotify" %}
+                                        <img src="https://png.icons8.com/spotify/color/48" class="disponible_icon" title="Spotify" width="48" height="48" alt="Spotify">
+                                    {% elif disponible.plataforma == "Deezer" %}
+                                        <img src="https://png.icons8.com/deezer/color/48" class="disponible_icon" title="Deezer" width="48" height="48" alt="Deezer">
+                                    {% elif disponible.plataforma == "Apple Music" %}
+                                        <img src="https://png.icons8.com/mac-client/androidL/48" class="disponible_icon" title="Apple Music" width="48" height="48" alt="Apple Music">
+                                    {% elif disponible.plataforma == "Amazon Music" %}
+                                        <img src="https://png.icons8.com/amazon/androidL/48" class="disponible_icon" title="Amazon Music" width="48" height="48" alt="Amazon Music">
+                                    {% elif disponible.plataforma == "YouTube" %}
+                                        <img src="https://png.icons8.com/youtube/color/48" class="disponible_icon" title="YouTube" width="48" height="48" alt="YouTube">
+                                    {% endif %}
+                                    
+                                    </a>
+                                {% endfor %}
+                            
                             </div>
-
-                            <div id="collapse{{ forloop.counter }}" class="collapse" role="tabpanel" aria-labelledby="heading{{ forloop.counter }}">
-                                <div class="card-block">
-                                    <p id="letra_cancion">
-                                        {{obj.letra|linebreaksbr}} <!-- {{value|linebreaksbr}} -->
-                                    </p>
+                        
+                        
+                    </div>
+                    
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                
+                <div class="row padding-top-2">
+    
+                    <div class="col-xs-12 col-md-6 info-container">
+                        <div id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="titulo_disco_completo">Letras</div>
+                            {% for obj in canciones %}
+    
+    
+                            <div class="card">
+                                <div class="card-header" role="tab" id="heading{{ forloop.counter }}">
+    
+                                    <a class="card_link" data-toggle="collapse" data-parent="#accordion" href="#collapse{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse{{ forloop.counter }}">
+                                        <span class="titulo_cancion_DC">{{obj.numero}} - {{obj.nombre}}</span></br>
+                                        <span class="musica_letra_DC">Música: {{obj.comp_musica}} | Letra: {{obj.comp_letra}}</span>
+                                    </a>
+    
+                                </div>
+    
+                                <div id="collapse{{ forloop.counter }}" class="collapse" role="tabpanel" aria-labelledby="heading{{ forloop.counter }}">
+                                    <div class="card-block">
+                                        <p id="letra_cancion">
+                                            {{obj.letra|linebreaksbr}} <!-- {{value|linebreaksbr}} -->
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
                     </div>
-                </div>
-                <div class="col-xs-12 col-md-6 ficha_tecnica">
-                    <div class="titulo_disco_completo">Ficha Tecnica</div>
-                    <div class="contenido_ficha_tecnica">
-                        {% for ficha_tecnica in fichas_tecnicas %}
-                            <div class="item_ficha_tecnica">
-                                <span class="nombre"> {{ ficha_tecnica.nombre }} </span>
-                                <div class="valores">
-                                    {{ ficha_tecnica.valor|linebreaksbr}}
+                    <div class="col-xs-12 col-md-6 ficha_tecnica">
+                        <div class="titulo_disco_completo">Ficha Tecnica</div>
+                        <div class="contenido_ficha_tecnica">
+                            {% for ficha_tecnica in fichas_tecnicas %}
+                                <div class="item_ficha_tecnica">
+                                    <span class="nombre"> {{ ficha_tecnica.nombre }} </span>
+                                    <div class="valores">
+                                        {{ ficha_tecnica.valor|linebreaksbr}}
+                                    </div>
                                 </div>
-                            </div>
-                        {% endfor %}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
-            </div>
+        </div>
+        <div class="compartir">
+            <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://lalala-oficial-kenca23.c9users.io/discos/{{disco.nombDisco}}&display=popup&ref=plugin&src=like&kid_directed_site=0&t=Lalalá&amp;src=sdkpreparse" class="compartir popup">compartir</a>
+            <a target="_blank" href="http://twitter.com/share?url=https://lalala-oficial-kenca23.c9users.io/discos/{{disco.nombDisco}}&amp;text=Lalalá - {{disco.nombre}}" class="compartir popup">Tweet</a>
         </div>
 
     </article>
@@ -82,11 +141,9 @@
 {% block js %}
 
 <script type="text/javascript">
-$( window ).on( "load", function() {
-    var letra = $("#letra_cancion");
     
-    console.log(letra.text());
-});
-
+     
+        
 </script>
+
 {% endblock %}

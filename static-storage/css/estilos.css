@@ -13,8 +13,17 @@ body {
 .bold {
   font-weight: 600;
 }
+.margin-top-2{
+  margin-top:2rem;
+}
 .padding-top-2{
   padding-top:2rem;
+}
+.padding-top-bottom-2{
+  padding: 2rem 0;
+}
+.padding-top-bottom-1{
+  padding: 1rem 0;
 }
   
 
@@ -518,11 +527,11 @@ Discos
   padding-bottom: 0.5rem ;
 }
 
-.texto-disco .image{
+.texto-disco .image, .texto-evento .image{
   margin-top: -50px
 }
 
-.texto-disco .image img{
+.texto-disco .image img, .texto-evento .image img{
   margin: 0 auto;
 }
 
@@ -568,6 +577,47 @@ Discos
   font-weight: bold;
 }
 
+.discoCompleto .reproductor_disponible{
+  background-color: rgba(69,74,77,0.2);
+}
+
+
+
+.reproductor_spotify{
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.discoCompleto .disponible_en_div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap:wrap;
+  padding:1rem 0;
+}
+
+
+.discoCompleto .disponible_content{
+  text-align: center;
+}
+
+.discoCompleto .disponible_content .disponible_titulo{
+  margin: 10px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.discoCompleto .disponible_link{
+  text-decoration: none;
+  text-align: center;
+  margin: 0 0.3rem;
+}
+
+.discoCompleto .disponible_icon{
+  /*max-height: 40px;*/
+  width: auto;
+}
+
 /*---------------------------
 Calendario
 ---------------------------*/
@@ -586,6 +636,39 @@ Calendario
   text-align: center;
   padding: 1rem 0;
   border-bottom: solid .1rem black; }
+  
+  
+  
+.info_especifica_div{
+  border-top:2px solid #F05661;
+  border-bottom:2px solid #F05661;
+}
+
+.info_especifica_p{
+  padding: 0 1rem;
+  margin:0 !important;
+}
+
+.info_especifica_p .color_principal{
+  color: #F05661;
+  font-weight:bold;
+}
+.info_especifica_p a{
+  text-decoration:underline;
+  color:black;
+}
+
+.links_eventos{
+  text-align:center;
+  font-size: 2rem;
+  padding:1rem 0;
+}
+.icono_evento{
+  margin:0 1rem;
+}
+.icono_evento:hover{
+  color:#F05661;
+}
 
 /*---------------------------
 Contacto
@@ -712,8 +795,43 @@ Gracias
 	opacity: 0;
 }
   
+
+.sencillos{
+  padding: 1rem 0;
+}  
+
+.sencillo_div{
+  margin:0 10px;
+}
+
+.sencillo_imagen{
+  max-width: 225px;
+  max-height: 225px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 5px;
   
-  
+}
+
+.sencillo_titulo{
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 0.1rem;
+  margin: 1rem 0 0 0;
+}
+.sencillo_titulo:after{
+	width: 100px;
+	display: block;
+	content: '';
+	height: 1px;
+	background: #333;
+	margin: 10px auto;
+}
+.sencillo_fecha {
+  text-align: center;
+}
+
+
   
 
 /*-------------------------------------------------------------
@@ -742,7 +860,7 @@ Media Queries
   html {
     font-size: 17px !important; }
 
-  .texto-disco .image{
+  .texto-disco .image, .texto-evento .image{
     margin-top: -20px
   }
   /*---------------------------
@@ -764,7 +882,13 @@ Media Queries
   ----------------------------*/
   .contenedor-bloque-suscribete {
     margin: 1rem auto;
-    width: 510px; } }
+    width: 510px; } 
+  
+  .discoCompleto .reproductor_disponible_flex{
+    display: flex;
+  }
+  
+}
 @media (min-width: 992px) {
   /*---------------------------
   Header
@@ -772,7 +896,7 @@ Media Queries
   .bienvenidos {
     height: 50vh;
   }
-  .texto-disco .image {
+  .texto-disco .image , .texto-evento .image {
     margin-top: -70px;
   }
   .encabezado {
