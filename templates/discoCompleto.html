@@ -15,7 +15,12 @@
     <meta property="og:image:height"     content="400">
 {% endblock %}
 
-{% block content %} {% include "includes/menu.html" %}
+{% block content %}
+
+
+
+{% include "includes/reproductor.html" %}
+{% include "includes/menu.html" %}
 {% include "includes/imagen-titulo.html" %}
 
 
@@ -49,10 +54,10 @@
             <div class="container-fluid reproductor_disponible margin-top-2">
                 <div class="container">
                     <div class="row reproductor_disponible_flex">
-                    <div class="col-xs-12 col-md-6 reproductor_spotify">
-                                <iframe src="https://open.spotify.com/embed?uri={{disco.playlist_spotify}}&theme=white" width="350" height="300" frameborder="0" allowtransparency="true"></iframe>
-                    </div>
-                    <div class="col-xs-12 col-md-6 disponible_en_div">
+                    <!--<div class="col-xs-12 col-md-6 reproductor_spotify">
+                                <iframe src="https://open.spotify.com/embed?uri={{disco.playlist_spotify}}&theme=white" max-width="350" height="300" frameborder="0" allowtransparency="true"></iframe>
+                    </div>-->
+                    <div class="col-xs-12  disponible_en_div">
                         
                             <div class="disponible_content">
                                 <h4 class="disponible_titulo">
@@ -61,15 +66,15 @@
                                 {% for disponible in disponible_en %}
                                     <a href="{{disponible.link}}" class="disponible_link" target="blank">  
                                     {% if disponible.plataforma == "Spotify" %}
-                                        <img src="https://png.icons8.com/spotify/color/48" class="disponible_icon" title="Spotify" width="48" height="48" alt="Spotify">
+                                        <img src="https://png.icons8.com/spotify/color/48" class="disponible_icon" title="Spotify"  alt="Escucha nuestra musica en Spotify">
                                     {% elif disponible.plataforma == "Deezer" %}
-                                        <img src="https://png.icons8.com/deezer/color/48" class="disponible_icon" title="Deezer" width="48" height="48" alt="Deezer">
+                                        <img src="{% static 'icons/deezer-logo-01.svg' %}" class="disponible_icon" title="Deezer"  alt="Escucha nuestra musica en Deezer">
                                     {% elif disponible.plataforma == "Apple Music" %}
-                                        <img src="https://png.icons8.com/mac-client/androidL/48" class="disponible_icon" title="Apple Music" width="48" height="48" alt="Apple Music">
+                                        <img src="https://png.icons8.com/mac-client/androidL/48" class="disponible_icon" title="Apple Music" alt="Escucha nuestra musica en Apple Music">
                                     {% elif disponible.plataforma == "Amazon Music" %}
-                                        <img src="https://png.icons8.com/amazon/androidL/48" class="disponible_icon" title="Amazon Music" width="48" height="48" alt="Amazon Music">
+                                        <img src="https://png.icons8.com/amazon/androidL/48" class="disponible_icon" title="Amazon Music" alt="Escucha nuestra musica en Amazon Music">
                                     {% elif disponible.plataforma == "YouTube" %}
-                                        <img src="https://png.icons8.com/youtube/color/48" class="disponible_icon" title="YouTube" width="48" height="48" alt="YouTube">
+                                        <img src="https://png.icons8.com/youtube/color/48" class="disponible_icon" title="YouTube" alt="Escucha nuestra musica en YouTube">
                                     {% endif %}
                                     
                                     </a>

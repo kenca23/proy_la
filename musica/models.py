@@ -108,3 +108,15 @@ class Disponible_En_Disco(models.Model):
 
     def __unicode__(self):
         return str(str(self.disco) + ' : ' + self.plataforma)
+        
+class Video(models.Model):
+    nombre = models.CharField(max_length=75, )
+    url = models.CharField(max_length=50, )
+    fecha_salida = models.DateField(auto_now=False, auto_now_add=False,)
+    
+
+    def __str__(self):
+        return str(self.nombre)
+
+    def __unicode__(self):
+        return str(self.nombre)

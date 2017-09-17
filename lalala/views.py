@@ -12,7 +12,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.views import View
 
 
-from musica.models import Disco
+from musica.models import Disco, Video
 from eventos.models import Evento
 from .forms import ContactForm
 from subscriber.forms import SubscriberForm
@@ -21,6 +21,7 @@ from shared.models import Imagen_Pagina
 def home(request):
     queryset = Disco.objects.all().order_by('-id')[:3]
     querysetEv = Evento.objects.filter(fecha__gte=datetime.datetime.today().date()).order_by('fecha')[0:6]
+    videos = Video.objects.filter(fecha_salida__lte=datetime.datetime.today().date()).order_by('-fecha_salida')[0:5]
     form = SubscriberForm
     print(querysetEv)
     content = {
@@ -28,6 +29,7 @@ def home(request):
         'titulo': 'Lalalá | Canción Actual',
         'object_list' : queryset,
         'evento' : querysetEv,
+        'videos' : videos,
         'form' : form
     }
     print(queryset)

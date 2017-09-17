@@ -25,6 +25,16 @@ body {
 .padding-top-bottom-1{
   padding: 1rem 0;
 }
+
+.reproductor_spotify_bottom{
+  width: 100%;
+  min-width: 320px;
+  height: 80px;
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  
+}
   
 
 .bienvenidos {
@@ -614,8 +624,11 @@ Discos
 }
 
 .discoCompleto .disponible_icon{
-  /*max-height: 40px;*/
-  width: auto;
+  /*max-height: 40px; */
+    max-width: 100px;
+    /* width: auto; */
+    height: auto;
+    margin: 0.5rem 0.1rem;
 }
 
 /*---------------------------
@@ -863,6 +876,12 @@ Media Queries
   .texto-disco .image, .texto-evento .image{
     margin-top: -20px
   }
+  
+  .reproductor_spotify_bottom{
+  width: 40%;
+    
+  }
+  
   /*---------------------------
   Imagen Disco
   ----------------------------*/

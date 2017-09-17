@@ -4,9 +4,7 @@
  {% endblock %} {% block content %} 
      
     
-
 {% include "includes/reproductor.html" %}
-
 {% include "includes/menu.html" %}
 
 <!--<div class="har_firefly data-total="70" data-minPixel="1" data-maxPixel="5""></div>-->
@@ -75,14 +73,11 @@
             <div class="har_db_slider">
 
                 <!-- item -->
+                {% for video in videos %}
                 <div class="har_video_item">
-                    <iframe src="https://www.youtube.com/embed/HcVv9R1ZR84" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{video.url}}?rel=0" frameborder="0" allowfullscreen></iframe>
                 </div>
-
-                <!-- item -->
-                <div class="har_video_item">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iNJdPyoqt8U?controls=1&amp;rel=0&amp;showinfo=0&amp;hd=1" frameborder="0" allowfullscreen></iframe>
-                </div>
+                {% endfor %}
             </div>
             <!-- slider end -->
 
@@ -155,9 +150,7 @@
                             <img src="http://placehold.it/500x750" alt="">
                         </div>
                         <div class="har_item_social">
-                            <a href="#"><i class="ti ti-facebook"></i></a>
-                            <a href="#"><i class="ti ti-twitter-alt"></i></a>
-                            <a href="#"><i class="ti ti-google"></i></a>
+                            <a href="#">Biografía</a>
                         </div>
                         <h4><b>Kevin Calvo</b> <br>Guitarrista / Vocalista</h4>
                     </div> 
@@ -168,9 +161,7 @@
                             <img src="http://placehold.it/500x750" alt="">
                         </div>
                         <div class="har_item_social">
-                            <a href="#"><i class="ti ti-facebook"></i></a>
-                            <a href="#"><i class="ti ti-twitter-alt"></i></a>
-                            <a href="#"><i class="ti ti-google"></i></a>
+                            <a href="#">Biografía</a>
                         </div>
                         <h4><b>Kenneth Calvo</b> <br>Bajista</h4>
                     </div> 
@@ -181,9 +172,7 @@
                             <img src="http://placehold.it/500x750" alt="">
                         </div>
                         <div class="har_item_social">
-                            <a href="#"><i class="ti ti-facebook"></i></a>
-                            <a href="#"><i class="ti ti-twitter-alt"></i></a>
-                            <a href="#"><i class="ti ti-google"></i></a>
+                            <a href="#">Biografía</a>
                         </div>
                         <h4><b>Roberto Cruz</b> <br>Baterista</h4>
                     </div> 

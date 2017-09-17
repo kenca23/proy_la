@@ -188,7 +188,7 @@
 		rewindSpeed : 300,
 		items: 1,
 		autoPlay : 8000, 
-		touchDrag:false,
+		touchDrag:true,
 		singleItem:true,
 		transitionStyle: 'fade',
 		navigationText:['<i class="ti ti-angle-left"></i>','<i class="ti ti-angle-right"></i>']
@@ -204,7 +204,7 @@
 		itemsMobile : [700,1],
 		itemsDesktop:3,
 		autoPlay : false, 
-		touchDrag:false, 
+		touchDrag:true, 
 		navigationText:['<i class="ti ti-angle-left"></i>','<i class="ti ti-angle-right"></i>']
 	});
 
@@ -217,8 +217,8 @@
 		itemsTablet:[1000,2],
 		itemsMobile : [569,1],
 		itemsDesktop:2,
-		autoPlay : true, 
-		touchDrag:false, 
+		autoPlay : false, 
+		touchDrag:true, 
 		navigationText:['<i class="ti ti-angle-left"></i>','<i class="ti ti-angle-right"></i>']
 	});
 
@@ -231,7 +231,7 @@
 		autoPlay : true, 
 		singleItem:true,
 		autoHeight : true,
-		touchDrag:false, 
+		touchDrag:true, 
 		navigationText:['<i class="ti ti-angle-left"></i>','<i class="ti ti-angle-right"></i>']
 	});
 
@@ -247,7 +247,7 @@
 			itemsMobile : [700,1],
 			itemsDesktop:1,
 			autoPlay : true, 
-			touchDrag:false, 
+			touchDrag:true, 
 			navigationText:['<i class="ti ti-angle-left"></i>','<i class="ti ti-angle-right"></i>']
 		});
 
