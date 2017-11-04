@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'eventos',
     'subscriber',
     'shared',
+    'bio_info',
+    'press_info',
 ]
 
 MIDDLEWARE = [

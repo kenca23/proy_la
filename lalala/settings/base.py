@@ -42,6 +42,10 @@ INSTALLED_APPS = [
     'redireccion',
     'musica',
     'eventos',
+    'subscriber',
+    'shared',
+    'bio_info',
+    'press_info',
 ]
 
 MIDDLEWARE = [

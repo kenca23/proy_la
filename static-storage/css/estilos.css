@@ -537,6 +537,10 @@ Discos
   padding-bottom: 0.5rem ;
 }
 
+.texto-evento{
+  margin-bottom: 2rem;
+}
+
 .texto-disco .image, .texto-evento .image{
   margin-top: -50px
 }
@@ -681,6 +685,12 @@ Calendario
 }
 .icono_evento:hover{
   color:#F05661;
+}
+
+.proximamente_eventos{
+  text-align:center;
+  font-size: 2rem;
+  padding:1rem 0;
 }
 
 /*---------------------------
@@ -845,6 +855,46 @@ Gracias
 }
 
 
+
+/*-------------------------------------------------------------
+Biografía
+--------------------------------------------------------------*/
+
+.sin_padding{
+  padding: 0;
+}
+
+.imagen_media_pantalla_div{
+    width:100%;
+    max-width:100%;
+    margin:0;
+    height: 100%;
+  }
+  
+  .imagen_media_pantalla{
+    width:100%;
+    max-width:100%;
+    margin:0;
+    height: 100%;
+  }
+  
+.texto_biografia{
+  padding: 1rem;
+  text-align: justify;
+  align-self: center;
+}
+
+.card_bio{
+  display: block;
+  align-items: normal;
+}
+.titulo_bio{
+ text-align:center;
+ font-weight:bold;
+ font-size:1.5em;
+}
+
+
   
 
 /*-------------------------------------------------------------
@@ -905,6 +955,22 @@ Media Queries
   
   .discoCompleto .reproductor_disponible_flex{
     display: flex;
+  }
+  
+  
+  /*-------------------------------------------------------------
+  Biografía
+  --------------------------------------------------------------*/
+  .card_bio{
+    display: flex;
+  }
+  
+  .orden_derecha_primero{
+    order:1;
+  }
+  
+  .orden_derecha_segundo{
+    order:2;
   }
   
 }

@@ -17,11 +17,18 @@ from eventos.models import Evento
 from .forms import ContactForm
 from subscriber.forms import SubscriberForm
 from shared.models import Imagen_Pagina
+from bio_info.models import Banda, Integrante
+from press_info.models import Integrante
+
 
 def home(request):
+    today = datetime.datetime.today()
     queryset = Disco.objects.all().order_by('-id')[:3]
     querysetEv = Evento.objects.filter(fecha__gte=datetime.datetime.today().date()).order_by('fecha')[0:6]
     videos = Video.objects.filter(fecha_salida__lte=datetime.datetime.today().date()).order_by('-fecha_salida')[0:5]
+    kevin = Integrante.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kevin Calvo')).order_by('-fecha_salida').first()
+    kenneth = Integrante.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kenneth Calvo')).order_by('-fecha_salida').first()
+    bob = Integrante.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Roberto Cruz')).order_by('-fecha_salida').first()
     form = SubscriberForm
     print(querysetEv)
     content = {
@@ -30,7 +37,10 @@ def home(request):
         'object_list' : queryset,
         'evento' : querysetEv,
         'videos' : videos,
-        'form' : form
+        'form' : form,
+        'kevin' : kevin,
+        'kenneth' : kenneth,
+        'bob' : bob
     }
     print(queryset)
     return render(request, "home.html", content)  
@@ -39,12 +49,27 @@ def home(request):
 def Biografia(request):
 	today = datetime.datetime.today()
 	imagen = Imagen_Pagina.objects.filter(Q(fecha__lte=today) & Q(nombre='BIO')).order_by('-fecha').first()
+	banda = Banda.objects.filter(fecha_salida__lte=today).order_by('-fecha_salida').first()
+	
+	kevincalvo = Integrante.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kevin Calvo')).order_by('-fecha_salida').first()
+	kennethcalvo = Integrante.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kenneth Calvo')).order_by('-fecha_salida').first()
+	robertocruz = Integrante.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Roberto Cruz')).order_by('-fecha_salida').first()
+	
+	
+	#integrantes = Integrante.objects.filter(fecha_salida__lte=today).order_by('fecha_salida').distinct()   #filter(Q(fecha__lte=today) & Q(nombre='BIO')).order_by('-fecha').first()
+	print(banda)
+	
+	
 	
 	urlImagen = imagen.imagen
 	content = {
 	'title' : 'Lalalá | Página Oficial',
         'titulo': 'Biografía',
 	'imagen' : urlImagen,
+	'banda' : banda,
+	'kevin' : kevincalvo,
+	'kenneth' : kennethcalvo,
+	'bob' : robertocruz,
 	}
 	return render(request, "biografia.html", content)  
 

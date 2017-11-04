@@ -9,6 +9,7 @@
 <main class="calendarioComp py-20" id="importante">
     <article class="container">
         <div class="row">
+            
             {% for obj in object_list %}
             <div class="col-12">
                 <a href="/calendario/{{obj.linkEvento}}" class="link-evento">
@@ -21,6 +22,10 @@
                     </div>
 
                 </a>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <h2 class="proximamente_eventos">Proximamente</h2>
             </div>
             {% endfor %}
 
