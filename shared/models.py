@@ -7,6 +7,7 @@ class Imagen_Pagina(models.Model):
     PRENSA = 'PRE'
     CONTACTO = 'CON'
     GRACIAS = 'GRA'
+    SUBSCRIBIRSE = 'SUB'
     
     PAGINA = (
         (DISCOGRAFIA, 'Discografía'),
@@ -15,6 +16,7 @@ class Imagen_Pagina(models.Model):
         (PRENSA, 'Prensa'),
         (CONTACTO, 'Contacto'),
         (GRACIAS, 'Gracias'),
+        (SUBSCRIBIRSE, 'Subcribirse'),
     )
     nombre = models.CharField(
         max_length=3,

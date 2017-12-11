@@ -894,7 +894,22 @@ Biografía
  font-size:1.5em;
 }
 
+/*-------------------------------------------------------------
+Prensa
+--------------------------------------------------------------*/
 
+.prensa{
+  background-color: #ffdbcc;
+}
+
+.fullheight{
+  height: 100% !important;
+  width:auto !important;
+}
+
+.pos-title{
+  top:-50px;
+}
   
 
 /*-------------------------------------------------------------
@@ -973,6 +988,12 @@ Media Queries
     order:2;
   }
   
+  /*-------------------------------------------------------------
+  Prensa
+  --------------------------------------------------------------*/
+  
+  
+  
 }
 @media (min-width: 992px) {
   /*---------------------------
@@ -980,6 +1001,9 @@ Media Queries
   ----------------------------*/
   .bienvenidos {
     height: 50vh;
+  }
+  .bigimage {
+    height: 100vh !important;
   }
   .texto-disco .image , .texto-evento .image {
     margin-top: -70px;

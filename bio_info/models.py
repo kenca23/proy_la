@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class Integrante(models.Model):
+class Miembro(models.Model):
     nombre = models.CharField('Nombre',max_length=30,)
     instrumento = models.CharField('Instrumento',max_length=30,)
     imagen = models.ImageField(upload_to='media/biografia/')

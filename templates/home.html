@@ -8,55 +8,20 @@
 {% include "includes/menu.html" %}
 
 <!--<div class="har_firefly data-total="70" data-minPixel="1" data-maxPixel="5""></div>-->
-
-
-<!-- Slider -->
-<div class="har_slider_carousel har_slider_txt_animation">
-
-    <!-- Item -->
-    <div class="har_slider har_wht_txt">
 {% load static %}
-        <div class="har_slider_img har_image_bck" data-image="{% static "img/gp_.jpg" %}"></div>  <!-- http://placehold.it/1400x900 -->
-
-        <!-- Over -->
-        <div class="har_over" data-color="#000" data-opacity="0"></div>
-
-
-
-        <!-- Slider Texts -->
-        <div class="container">
-            <div class="har_slide_txt har_slide_left_middle text-left" data-0="opacity:1; margin-top:0px" data--400-bottom="opacity:0; margin-top:-100px">
-                <div class="har_slide_title">Lalalá<br>Nueva canción</div>
-            </div> 
-        </div>
-        <!-- Slider Texts End -->
-     <!-- container end -->
-    </div>
-
-
-     <!-- Item -->
-    <div class="har_slider  har_wht_txt">
-        <div class="har_slider_img har_image_bck" data-image="{% static "img/jade.jpg" %}"></div>
-
-        <!-- Over -->
-        <div class="har_over" data-color="#000" data-opacity="0"></div>
-
-        <!-- Slider Texts -->
-        <div class="container">
+<section class="bienvenidos bigimage" style="background: url('{% static "img/jade_corta.svg" %}')"> 
+    <div class="texto-encabezado text-center">
+         <div class="container">
             <div class="har_slide_txt har_slide_left_middle text-left" data-0="opacity:1; margin-top:0px" data--400-bottom="opacity:0; margin-top:-100px">
 
-                <div class="har_slide_title">Lalalá<br>Canción actual</div>
+                <div class="har_slide_title">Lalalá<br>Jade</div>
 
             </div> 
         </div>
-        <!-- Slider Texts End -->
-
-     <!-- container end -->
     </div>
+</section>
 
-</div>
-<!-- carousel end -->
-<!-- Slider End -->
+
 
 
  <!-- main section -->
@@ -66,8 +31,8 @@
     <main class="har_section har_image_bck"  id="video">
         <div class="container text-center">
 
-            <h2>Último Video</h2>
-            <h3>Siguenos en <a href="#">Youtube</a> para ver más</h3>
+            <h2>Últimos Videos</h2>
+            <h3>Siguenos en <a href="https://www.youtube.com/channel/UCEbntBDO3yasWFSbF9lf9Wg/featured">Youtube</a> para ver más</h3>
 
 
             <div class="har_db_slider">
@@ -113,13 +78,13 @@
                         </span>
                     </a>
                     <h4>{{obj.nombre}}</h4>
-                    <span class="har_shop_desc">Disponible en</span>
+                    <!--<span class="har_shop_desc">Disponible en</span>
                     <span class="har_shop_price"></span>
                     <span class="har_shop_soc_c">
                         <a href="#"><i class="fa fa-spotify"></i></a>
                         <a href="#"><i class="fa fa-youtube"></i></a>
                         <a href="#"><i class="fa fa-headphones"></i></a>
-                    </span>
+                    </span>-->
                 </div>
                 {% endfor %}
                 
@@ -147,7 +112,7 @@
                     <!-- Kevin Calvo -->
                     <div class="har_icon_box har_team_box">
                         <div class="har_icon_box_photo">
-                            <img src="http://placehold.it/500x750" alt="Foto Kevin Calvo">
+                            <img src="{{ MEDIA_URL }}{{ kevin.imagen.url }}" alt="Foto Kevin Calvo">
                         </div>
                         <div class="har_item_social">
                             <a href="/biografia/#{{kevin.id_pagina}}">Biografía</a>
@@ -452,7 +417,7 @@
 
 
 <!-- section -->
-    <section class="har_section har_image_bck har_wht_txt har_fixed" data-image="http://placehold.it/1400x900" data-stellar-background-ratio="0.2" id="contacts">
+    <section class="har_section har_image_bck har_wht_txt har_fixed" data-image="{% get_media_prefix %}{{ imagen }}" data-stellar-background-ratio="0.2" id="contacts">
 
         <!-- Over -->
         <div class="har_over" data-color="rgb(253, 91, 102)" data-opacity="0.7" data-blend="multiply"></div>

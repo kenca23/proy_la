@@ -17,7 +17,7 @@ from eventos.models import Evento
 from .forms import ContactForm
 from subscriber.forms import SubscriberForm
 from shared.models import Imagen_Pagina
-from bio_info.models import Banda, Integrante
+from bio_info.models import Banda, Miembro
 from press_info.models import Integrante
 
 
@@ -30,6 +30,8 @@ def home(request):
     kenneth = Integrante.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kenneth Calvo')).order_by('-fecha_salida').first()
     bob = Integrante.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Roberto Cruz')).order_by('-fecha_salida').first()
     form = SubscriberForm
+    imagen = Imagen_Pagina.objects.filter(Q(fecha__lte=today) & Q(nombre='SUB')).order_by('-fecha').first()
+    urlImagen = imagen.imagen
     print(querysetEv)
     content = {
         'title' : 'Lalalá | Página Oficial',
@@ -40,7 +42,8 @@ def home(request):
         'form' : form,
         'kevin' : kevin,
         'kenneth' : kenneth,
-        'bob' : bob
+        'bob' : bob,
+        'imagen' : urlImagen
     }
     print(queryset)
     return render(request, "home.html", content)  
@@ -51,9 +54,9 @@ def Biografia(request):
 	imagen = Imagen_Pagina.objects.filter(Q(fecha__lte=today) & Q(nombre='BIO')).order_by('-fecha').first()
 	banda = Banda.objects.filter(fecha_salida__lte=today).order_by('-fecha_salida').first()
 	
-	kevincalvo = Integrante.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kevin Calvo')).order_by('-fecha_salida').first()
-	kennethcalvo = Integrante.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kenneth Calvo')).order_by('-fecha_salida').first()
-	robertocruz = Integrante.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Roberto Cruz')).order_by('-fecha_salida').first()
+	kevincalvo = Miembro.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kevin Calvo')).order_by('-fecha_salida').first()
+	kennethcalvo = Miembro.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kenneth Calvo')).order_by('-fecha_salida').first()
+	robertocruz = Miembro.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Roberto Cruz')).order_by('-fecha_salida').first()
 	
 	
 	#integrantes = Integrante.objects.filter(fecha_salida__lte=today).order_by('fecha_salida').distinct()   #filter(Q(fecha__lte=today) & Q(nombre='BIO')).order_by('-fecha').first()
