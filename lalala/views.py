@@ -18,7 +18,8 @@ from .forms import ContactForm
 from subscriber.forms import SubscriberForm
 from shared.models import Imagen_Pagina
 from bio_info.models import Banda, Miembro
-from press_info.models import Integrante
+from press_info.models import Foto, Video, Press_Info, Enlace
+
 
 
 def home(request):
@@ -26,9 +27,9 @@ def home(request):
     queryset = Disco.objects.all().order_by('-id')[:3]
     querysetEv = Evento.objects.filter(fecha__gte=datetime.datetime.today().date()).order_by('fecha')[0:6]
     videos = Video.objects.filter(fecha_salida__lte=datetime.datetime.today().date()).order_by('-fecha_salida')[0:5]
-    kevin = Integrante.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kevin Calvo')).order_by('-fecha_salida').first()
-    kenneth = Integrante.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kenneth Calvo')).order_by('-fecha_salida').first()
-    bob = Integrante.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Roberto Cruz')).order_by('-fecha_salida').first()
+    kevin = Miembro.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kevin Calvo')).order_by('-fecha_salida').first()
+    kenneth = Miembro.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kenneth Calvo')).order_by('-fecha_salida').first()
+    bob = Miembro.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Roberto Cruz')).order_by('-fecha_salida').first()
     form = SubscriberForm
     imagen = Imagen_Pagina.objects.filter(Q(fecha__lte=today) & Q(nombre='SUB')).order_by('-fecha').first()
     urlImagen = imagen.imagen
@@ -79,12 +80,24 @@ def Biografia(request):
 def Prensa(request):
 	today = datetime.datetime.today()
 	imagen = Imagen_Pagina.objects.filter(Q(fecha__lte=today) & Q(nombre='PRE')).order_by('-fecha').first()
+	kevincalvo = Miembro.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kevin Calvo')).order_by('-fecha_salida').first()
+	kennethcalvo = Miembro.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kenneth Calvo')).order_by('-fecha_salida').first()
+	robertocruz = Miembro.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Roberto Cruz')).order_by('-fecha_salida').first()
+	fotos = Foto.objects.filter(fecha_salida__lte=today).order_by('-fecha_salida') [0:15]
+	videos = Video.objects.filter(fecha_salida__lte=today).order_by('-fecha_salida')
+	enlaces = Enlace.objects.filter(fecha_salida__lte=today).order_by('-fecha_salida')
 	
 	urlImagen = imagen.imagen
 	content = {
 	'title' : 'Lalalá | Página Oficial',
         'titulo': 'Prensa',
 	'imagen' : urlImagen,
+	'kevin' : kevincalvo,
+	'kenneth' : kennethcalvo,
+	'bob' : robertocruz,
+	'fotos': fotos,
+	'videos' : videos,
+	'enlaces' : enlaces,
 	}
 	return render(request, "prensa.html", content) 
 

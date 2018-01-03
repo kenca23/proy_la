@@ -1,28 +1,93 @@
 {% extends "header.html" %} {% block style %}
 <!-- Carga de Galeria de imágenes -->
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/animate.min.css' %}"> {% endblock %} {% block content %} {% include "includes/reproductor.html" %} {% include "includes/menu.html" %}
+<link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+
+{% endblock %} {% block content %} {% include "includes/reproductor.html" %} {% include "includes/menu.html" %}
+
 
 {% load static %}
 
 
 <main class="prensa" id="importante">
-    <div class="pastilla_prensa">
-        
+    <div class="center pastilla_prensa">
+        <img src="{% static 'icons/pastilla-01.svg' %}" class="pastilla_grande"></img>
+        <p class="title">Prensa</p>
     </div>
-    <div class="logo_prensa">
-        
+    <div class="center logo_prensa">
+        <img src="{% static 'icons/lalala-logo.svg' %}" class="lalala_grande"></img>
     </div>
-    <div class="integrantes_prensa">
-        
-    </div>
+    <!-- section -->
+    <section class="har_section har_image_bck integrantes_prensa" id="artist">
+        <div class="container text-center">
+
+            <!-- boxes -->
+            <div class="har_icon_boxes row text-center">
+
+
+                <!-- slider -->  
+                <div class="har_team_slider">
+
+                    <!-- Kevin Calvo -->
+                    <div class="har_icon_box har_team_box">
+                        <div class="har_icon_box_photo">
+                            <img src="{{ MEDIA_URL }}{{ kevin.imagen_prensa.url }}" alt="Foto Kevin Calvo">
+                        </div>
+                        <div class="har_item_social har_item_social_press">
+                            <a href="/biografia/#{{kevin.id_pagina}}">Biografía</a>
+                        </div>
+                        <h4><b>Kevin Calvo</b> <br>Guitarrista / Vocalista</h4>
+                    </div> 
+
+                    <!-- Kenneth Calvo -->
+                    <div class="har_icon_box har_team_box">
+                        <div class="har_icon_box_photo">
+                            <img src="{{ MEDIA_URL }}{{ kenneth.imagen_prensa.url }}" alt="Foto Kenneth Calvo">
+                        </div>
+                        <div class="har_item_social har_item_social_press">
+                            <a href="/biografia/#{{kenneth.id_pagina}}">Biografía</a>
+                        </div>
+                        <h4><b>Kenneth Calvo</b> <br>Bajista</h4>
+                    </div> 
+
+                    <!-- Roberto Cruz -->
+                    <div class="har_icon_box har_team_box">
+                        <div class="har_icon_box_photo">
+                            <img src="{{ MEDIA_URL }}{{ bob.imagen_prensa.url }}" alt="Foto Roberto Cruz">
+                        </div>
+                        <div class="har_item_social har_item_social_press">
+                            <a href="/biografia/#{{bob.id_pagina}}">Biografía</a>
+                        </div>
+                        <h4><b>Roberto Cruz</b> <br>Baterista</h4>
+                    </div> 
+
+                </div>
+                <!-- slider end -->
+            </div>
+            <!-- boxes end -->
+
+        </div>
+        <!-- container end -->
+
+    </section>
+    <!-- section end -->
+    
     <article class="biografia_prensa">
         
     </article>
     <div class="propuesta_prensa">
         
     </div>
-    <div class="fotos_prensa">
+    <div class="fotos_prensa container">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+                <div class="galleria margin_auto">
+                    {% for foto in fotos %}
+                    <img src="{{ MEDIA_URL }}{{foto.imagen.url}}" data-title="{{foto.nombre}}" data-description="{{foto.descripcion}}">
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
         
     </div>
     <div class="videos_prensa">
@@ -35,4 +100,12 @@
         
     </div>
 </main>
- {% include "includes/footer.html" %} {%endblock%} {% block js %} {% endblock %}
+ {% include "includes/footer.html" %} {%endblock%} {% block js %}
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>
+ <script>
+	(function() { 
+            Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.classic.min.js');
+            Galleria.run('.galleria');
+        }());
+        </script>
+ {% endblock %}

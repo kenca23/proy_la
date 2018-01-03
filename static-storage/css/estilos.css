@@ -898,19 +898,46 @@ Biografía
 Prensa
 --------------------------------------------------------------*/
 
+.prensa .center{
+  width: 100%;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
 .prensa{
   background-color: #ffdbcc;
+  padding-top: 3rem;
 }
-
-.fullheight{
-  height: 100% !important;
-  width:auto !important;
+.prensa .pastilla_prensa{
 }
-
-.pos-title{
-  top:-50px;
+.prensa .pastilla_prensa .pastilla_grande{
+  min-height: 50vh;
+  max-height: 60vh;
+  width: auto;
 }
+.prensa .pastilla_prensa .title{
+  display: inline;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
   
+}
+.prensa .logo_prensa .lalala_grande{
+  min-width: 50%;
+  max-width: 60%;
+  height: auto;
+}
+.har_item_social_press{
+  background-color: #ffdbcc;
+}
+.har_icon_box:hover .har_item_social_press{
+  opacity: 0.7;
+}
+.galleria{ max-width: 900px; height: 500px; background: #ffdbcc }
+
+.margin_auto{
+  margin: 0 auto;
+}
 
 /*-------------------------------------------------------------
 Media Queries

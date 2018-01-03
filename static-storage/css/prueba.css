@@ -1,0 +1,1907 @@
+/* TABLE OF CONTENT
+======================================
+01. Main Styles
+	01.1 White Text
+	01.2 Titles
+02. Bootstrap
+	02.1 Align Center
+	02.2 Tabs
+	02.3.Buttons
+	02.4 Labels
+	02.5 Alerts
+	02.6 Lightbox
+	02.7 Pagination
+	02.8 Progress Bars
+	02.8 Preloader
+	02.10 Calendar
+03. Sidebars
+	03.1 Content
+	03.2 Main Sidebar
+	03.3 Section
+04. Header
+	04.1 Logo Animation
+	04.2 Logo Img
+	04.3 Tranparency Menu
+	04.4 Full Width Submenu
+	04.5 Horizontal Menu
+	04.6 Language Menu
+	04.7 Mobile Menu
+	04.8 Header Animation
+	04.9 Passpartu
+	04.10 Search
+	04.11 Header Login Form
+05. Slider
+	05.1 Slider Text
+	05.2 Slider Aligns
+	05.3 Scroll Down
+	05.4 About Images
+06. Shortcodes
+  06.0 Accordion
+	06.1 Preloader
+	06.2 Video
+	06.3 Instagram
+	06.4 News
+	06.5 Countdown
+	06.6 Counters
+	06.7 Events
+	06.8 Shop
+	 06.8.1 Shop Player
+	06.9 Icon Boxes
+	06.10 Animation Blocks
+	06.11 Browsers Images
+	06.12 Team
+	06.13 Sliders
+	06.14 News Block
+	06.15 Around Block
+	06.16 Price
+	06.17 Services Block
+07. Footer
+	07.1 To Top
+	07.2 Map
+08. Inside Pages
+	08.1 Portfolio
+	08.2 Pages Title
+	08.3 Breadcrumbs
+	08.4 Demos
+	08.5 One Page Nav
+	08.6 Blog
+	08.7 Widgets
+	08.8 Comments
+	08.9 Masonry
+	08.10 Projects
+	08.11 Shop
+	08.12 Tags
+	08.13 Related Products
+	08.14 Checkout
+	08.15 Cart
+	08.16 Single Products
+09.Red Demo
+	09.1 AudioPlayer
+  09.2 Slider Aligns
+  09.3 Counters
+  09.4 Events
+09.01 Video Background Black Demo
+ 09.02 Video Player
+09.2 Studio Demo
+09.3 Image Background 
+10. Mobile, Tablet
+	10.1 Mobile
+	10.2 Tablet
+
+======================================
+*/
+
+
+/*===============================================*/
+/* 01. Main Styles                               */
+/*===============================================*/
+
+body {
+  color: #333;
+  font:400 14px/25px Raleway, Arial,sans-serif;
+	margin:0;
+	padding:0;
+	min-height:100%;
+	height: 100%;
+	background-color: #fff;
+}
+a, a:hover, a:focus, a:active {
+	color: #6f6f6f
+}
+html {
+	min-height:100%;
+	height:100%
+}
+.har_page {
+	min-height:100%;
+	position:relative;
+	height:100%;	
+	left: 0;
+}
+.har_over {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 1
+}
+.har_image_bck {
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+.har_top_menu_mobile_link {
+	display: none;
+}
+
+/*01.1 White Text*/
+.har_wht_txt {
+	color: #fff;
+}
+	.har_wht_txt h2:after {
+		background: rgba(255,255,255,0.1);
+	}
+	.har_wht_txt a, .har_wht_txt a i {
+		color: #fff;
+	}
+
+
+/*01.2 Titles*/
+
+
+h2 {
+	font:400 24px Raleway, Arial;
+	line-height: 1.125;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+.har_middle_titles h2 {
+	font:900 44px Raleway, Arial;
+	text-transform: uppercase;
+}
+h2:after {
+	display: block;
+	content: '';
+	width: 112px;
+	height: 1px;
+	background: #C9C9C9;
+	margin-top: 20px;
+	-webkit-transition: width 2s;
+	-o-transition: width 2s;
+	transition: width 2s;
+}
+	.text-center h2:after {
+		margin-left: auto;
+		margin-right: auto;
+	}	
+h3 {
+	font:300 22px/30px Raleway, Arial;
+	margin-bottom: 20px;
+}
+.har_content .text-center h3 {
+	max-width: 700px;
+	margin-right: auto;
+	margin-left: auto	
+}
+.har_content img {
+	max-width: 100%;
+}
+h4 {
+	margin: 20px 0;
+}	
+
+/*===============================================*/
+/* 02. Bootstrap                                 */
+/*===============================================*/
+
+/*02.1 Align Center*/
+.container-fluid {
+	position: relative;
+	z-index: 1;
+}
+	.text-center h4:after {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+/*AbsBlocks */
+.text-center p {
+	max-width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.har_form .btn {
+	margin: 0;
+}
+.har_form .col-md-12{
+	margin-bottom:2rem;
+}
+p {
+	margin-bottom: 30px;
+}
+.btn {
+	font-size: 1rem;
+	border: 0;
+	border-radius:0;
+	-webkit-transition: all 0.5s linear ;
+	-o-transition: all 0.5s linear ;
+	transition: all 0.5s linear;
+	background: rgba(0,0,0,0.2);
+	padding: 10px;
+}
+	.btn:hover {
+		color: #fff;
+		background: rgba(0,0,0,0.6);
+		box-shadow: 0 15px 15px -10px rgba(0,0,0, .5);
+	}
+.har_wht_txt .btn {
+	background: rgba(255,255,255,0.5);
+	color: #fff;
+	z-index: 99;
+}
+
+	.har_wht_txt .btn:hover {
+		background: rgba(0,0,0,0.9);
+	}
+
+/*02.2 Tabs*/
+
+/*02.3.Buttons*/
+.btn {
+	text-shadow: none;
+}
+
+
+
+
+/*02.4 Labels*/
+/*02.5 Alerts*/
+/*02.6 Lightbox*/
+/*02.7 Pagination*/
+
+/*02.8 Progress Bars*/
+
+/*02.9 Preloader*/
+
+/*02.10 Calendar*/
+
+
+/*===============================================*/
+/* 03. Sidebars                                  */
+/*===============================================*/
+
+/*03.1 Content*/
+.har_content {
+	position: relative;
+}
+.container {
+	position: relative;
+	z-index: 2;
+}
+
+/*03.2 Main Sidebar*/
+
+
+/*03.3 Section*/
+
+.har_section {
+	overflow: hidden;
+	position: relative;
+}
+.har_section .container {
+	padding-top: 70px;
+	padding-bottom: 55px;
+}
+.har_section .container-fluid {
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+.container {
+	position: relative;
+}
+
+
+
+/*===============================================*/
+/* 04. Header                                    */
+/*===============================================*/
+
+header {
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	top: 0;
+	z-index: 10;
+}
+	
+		.har_logo {
+			font:900 24px/18px Raleway, Arial;
+			color:#333;
+			text-transform: uppercase;
+			position: absolute;
+			top: 20px;
+			-webkit-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			transition: all 0.3s;
+			margin-left: 50px;
+		}
+			.har_logo:hover {
+				text-decoration: none;
+			}
+		/*04.1 Logo Animation*/
+
+
+		/*04.2 Logo Img*/
+		.har_logo img {
+			max-height: 40px;
+			width: auto;
+		}
+		
+		.har_logo_eq {
+			display:block;
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top: 20px;
+			-webkit-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			transition: all 0.3s;
+			z-index: 5;
+		}
+		.har_logo_eq span {
+			display: inline-block;
+			width: 1px;
+			height: 0;
+			border-left: 1px dotted #fff;
+			margin-left: -3px;
+			position: absolute;
+			top: 50%;
+			transform:translateY(-50%);
+		}
+		.har_logo_eq span:nth-child(1) {
+			margin-left: 0;
+		}
+		.har_logo_eq span:nth-child(2) {
+			margin-left: 2px;
+		}
+		.har_logo_eq span:nth-child(3) {
+			margin-left: 4px;
+		}
+		.har_logo_eq span:nth-child(4) {
+			margin-left: 6px;
+		}
+		.har_logo_eq span:nth-child(5) {
+			margin-left: 8px;
+		}
+		.har_logo_eq span:nth-child(6) {
+			margin-left: 10px;
+		}
+		.har_logo_eq span:nth-child(7) {
+			margin-left: 12px;
+		}
+		.har_logo_eq span:nth-child(8) {
+			margin-left: 14px;
+		}
+		.har_logo_eq span:nth-child(9) {
+			margin-left: 16px;
+		}
+		.har_logo_eq span:nth-child(10) {
+			margin-left: 18px;
+		}
+		.har_logo_eq span:nth-child(11) {
+			margin-left: 20px;
+		}
+		.har_logo_eq span:nth-child(12) {
+			margin-left: 22px;
+		}
+		.har_logo_eq span:nth-child(13) {
+			margin-left: 24px;
+		}
+		.har_logo_eq span:nth-child(14) {
+			margin-left: 26px;
+		}
+		.har_logo_eq span:nth-child(15) {
+			margin-left: 28px;
+		}
+		.har_logo_eq span:nth-child(16) {
+			margin-left: 30px;
+		}
+		.har_logo_eq span:nth-child(17) {
+			margin-left: 32px;
+		}
+		.har_logo_eq span:nth-child(18) {
+			margin-left: 34px;
+		}
+		.har_logo_eq span:nth-child(19) {
+			margin-left: 36px;
+		}
+		.har_logo_eq span:nth-child(20) {
+			margin-left: 38px;
+		}
+
+
+		
+		header nav {
+			height: 83px;
+			background: rgba(255,255,255,0.3);
+			position: relative;
+			width: 100%;
+			border-bottom: 1px solid rgba(0,0,0,0.1);
+			-webkit-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			transition: all 0.3s;
+		}
+			header nav.har_light_nav {
+				background: rgba(255,255,255,0.8);
+			}
+		header .container {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		/*04.3 Tranparency Menu*/
+		header nav.har_transp_nav {
+			background: rgba(255,255,255,0);
+			color: #fff;
+			border-bottom: 1px solid rgba(255,255,255,0.05);
+		}
+			header nav.har_transp_nav a {
+				color: #fff;
+			}
+
+
+		header nav ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+			.har_top_menu {
+				float: right;
+				margin-right: -35px;
+			}
+				.har_top_menu a {
+					-webkit-transition: all 0.3s;
+					-o-transition: all 0.3s;
+					transition: all 0.3s;
+					text-transform: uppercase;
+					font:600 13px/24px Raleway;
+					position: relative;
+				}
+				.har_top_menu a:hover {
+					text-decoration: none;
+					color: #000;
+				}
+				.har_transp_nav .har_top_menu a:hover {
+					color: #fff;
+				}
+			.har_parent > a:after {
+				display: inline-block;
+				font-size: 12px;
+				font-family: themify;
+				margin-left: 10px;
+			}
+						.har_top_menu li:hover  > a:before {
+							display: block;
+							content: '';
+							height: 1px;
+							width: 30%;
+							position: absolute;
+							top: 55px;
+							margin-right: 30px;
+							-webkit-transition: all 0.3s;
+							-o-transition: all 0.3s;
+							transition: all 0.3s;
+							border-bottom: 2px solid rgba(0,0,0,.5);
+						}
+						.har_transp_nav .har_top_menu li:hover  > a:before {
+							border-bottom: 2px solid #fff;
+						}
+
+
+						
+			header nav ul li {
+				float: left;
+				height: 100%;
+			}
+				header nav ul li a {
+					display: block;
+					height: 82px;
+					padding: 29px 20px;
+					-webkit-transition: all 0.3s;
+					-o-transition: all 0.3s;
+					transition: all 0.3s;
+					color: #000;
+				}
+
+			/*04.4 Full Width Submenu*/
+
+			/*04.5 Horizontal Menu*/
+			
+			/*04.6 Language Menu*/
+
+			/*04.7 Mobile Menu*/
+
+			/*04.8 Header Animation*/
+
+/*04.9 Passpartu*/
+
+/*04.10 Search*/
+
+/*04.11 Header Login Form*/
+
+/*===============================================*/
+/* 05. Slider                                    */
+/*===============================================*/
+/*Gradient Slider*/
+
+
+/*Slider Playlist*/
+/*Slider Disk*/
+
+/*You Toube Background*/
+
+/*Particles*/
+
+/*Firefly*/
+
+	/*05.1 Slider Text*/
+	.har_slide_txt {
+		position: absolute;
+		width: 50%;
+	}
+	
+	/*05.2 Slider Aligns*/
+	.har_slide_left_middle {
+		left: 60px;
+		top: 50%;
+		transform:translateY(-50%);
+	}
+		.har_slide_title {
+			font:900 44px Raleway, Arial;
+			line-height: 1.0625;
+			text-transform: uppercase;
+		}
+	/*05.3 Scroll Down*/
+/*05.4 About Images*/
+
+/*===============================================*/
+/* 06. Shortcodes                                */
+/*===============================================*/
+
+/*Gradient Player*/
+
+/*Orange Player*/
+/*06.0 AudioPlayer Left Player*/
+/*White Player*/
+/*Studio Playlist*/
+/*Festival Concerts Plalist*/
+/*Purple Playlist*/
+/*Main Player Stiles*/
+
+/*Accordion*/
+
+/*Soundcloud PA*/
+
+/*06.1 Preloader*/.har_preloader {
+	position: fixed;
+	background: #fff;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 999;
+}
+	.har_preloader .har_logo_eq {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform:translateX(-50%) translateY(-50%);
+	}
+	.har_preloader .har_logo_eq span {
+		border-left: 1px dotted #333;
+	}
+
+
+/*06.2 Video*/
+.har_db_slider {
+	margin: 0;
+}
+.har_video_item {
+}
+	.har_video_item iframe {
+		margin: 0 auto;
+		width: 95%;
+    		height: 355px;
+    border: 0;
+	}
+/*06.3 Instagram*/
+
+/*06.4 News*/
+
+/*06.5 Countdown*/
+
+/*06.6 Counters*/
+
+/*Poloroid Events*/
+/*06.7 Events*/
+
+/*06.8 Shop*/
+.har_shop_al_item {
+	display: block;
+	width: 380px;
+	position: relative;
+	margin: 20px auto;
+}
+	
+	.har_shop_al_item_bl:hover .har_shop_item_env {
+		right: 115px;
+	}
+	
+.har_shop_item_cover {
+	width: 250px;
+	height: 243px;
+	display: block;
+	border-radius: 4px;
+	position: relative;
+	z-index: 2;
+	margin-left: 65px;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	border: 1px solid #A6A6A6;
+}
+.har_shop_item_env {
+	background: url(../images/env.png);
+	height: 245px;
+	width: 45px;
+	display: block;
+	position: absolute;
+	z-index: 1;
+	-webkit-background-size: cover;
+	background-size: cover;
+	top: 0;
+	margin-top: -2px;
+	right: 70px;
+	z-index: 1;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.har_shop_al_item_bl h4  {
+	margin: 12px 0 0;
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+.har_shop_al_item_bl h4:after{
+	width: 100px;
+	display: block;
+	content: '';
+	height: 1px;
+	background: #333;
+	margin: 10px auto;
+}
+
+/*06.8.1 Shop Player*/
+/*Slider Playlist*/
+
+/*06.9 Icon Boxes*/
+.har_icon_boxes {
+	margin-top: 20px;
+}
+.har_icon_box {
+	margin-bottom: 50px;
+	color: #666;
+	-webkit-transition: all 0.6s;
+	-o-transition: all 0.6s;
+	transition: all 0.6s;
+	padding: 0 10px;
+}
+	
+	.har_icon_box h4 {
+		font:500 16px Raleway, Arial;
+		text-transform: uppercase;
+		line-height: 1.225;
+		color: #333;
+		margin-bottom: 15px;
+		/*background: #fff;*/
+		position: relative;
+		z-index: 1;
+		margin: 0;
+		padding: 15px 0;
+	}
+		.har_icon_box h4:after {
+			display: block;
+			content: '';
+			height: 1px;
+			width: 100px;
+			background: #C9C9C9;
+			margin-top: 15px;
+			-webkit-transition: all 1s;
+			-o-transition: all 1s;
+			transition: all 1s;
+		}
+		.har_icon_box:hover h4:after {
+			width: 150px;
+		}
+		.har_icon_box h4 b {
+			display: block;
+			font-size: 20px;
+			margin: 0 0 4px;
+		}
+		.har_icon_box h4 b:after {
+			display: block;
+		}
+
+
+/*06.10 Animation Blocks*/
+/*Testimonials Animation*/
+/*Portfolio Animation*/
+/*Our Team Animation*/
+/*Discography Animation*/
+/*Header Animation*/
+
+/*Upcoming Events Animation*/
+/*Contact Us Animation*/
+.container-fluid .har_form .col-md-12{
+	margin-bottom: 90px;
+}
+
+/*News And Updates Animation*/
+/*Portfolio Poloroid Animation*/
+/*06.11 Browsers Images*/
+
+/*06.12 Team*/
+.har_icon_box_photo {
+	overflow: hidden;	
+	height: 350px;
+	position: relative;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 1s;
+}
+.har_team_box h4 b {
+	display: inline-block;
+	margin: 8px 0;
+	font:900 26px/38px Raleway, Arial;
+}
+.har_team_box {
+	margin-bottom: 0;
+}
+
+	
+	.har_icon_box_photo:after {
+		display: block;
+		content: '';
+		height: 1px;
+		width: 100%;
+		background: #c9c9c9;
+		position: absolute;
+		bottom: 0;
+	}
+.har_icon_box_photo img {
+	width: auto;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.3s ease;
+	height: 110%;
+}
+	.har_icon_box:hover .har_icon_box_photo img {
+		height: 100%;
+	}
+.har_item_social a {
+	display: inline-block;
+	margin: 0 5px;
+	text-decoration: none;
+  -o-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.har_item_social a:hover {
+	
+	color: #F05661;
+}
+
+.har_item_social {
+	position: absolute;
+	margin-top: -30px;
+	padding: 10px 0;
+	left: 10px;
+	right: 10px;
+	background: rgba(255,255,255,0.8);
+	border-top: 1px solid #c9c9c9;
+	z-index: 0;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	opacity: 0;
+}
+	.har_icon_box:hover .har_item_social {
+		margin-top: -45px;
+		opacity: 1;
+	}
+
+
+
+/*06.13 Sliders*/
+
+/*06.14 News Block*/
+	
+
+/*06.15 Around Block*/
+
+/*06.16 Price*/
+
+/*06.17 Services Block*/
+
+
+/*===============================================*/
+/* 07. Footer                                    */
+/*===============================================*/
+
+footer {
+	padding-top: 87px;
+	padding-bottom: 84px;
+}
+.har_footer_social {
+	height: 50px;
+}
+.har_footer_social a {
+	display: inline-block;
+	font-size: 20px;
+	text-decoration: none;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+	vertical-align: top;
+	width: 40px;
+	text-align: center;
+	font-size: 18px;
+}
+.har_footer_social a:hover {
+	font-size: 24px;
+	color: #292929;
+}
+	.har_footer_social a i {
+		position: relative;
+	}
+footer a {
+	color: #333;
+}
+/*07.1 To Top*/
+.har_top {
+	font-size: 3rem;
+    color: #F05661;
+	position: fixed;
+	bottom: 0;
+	right: 15px;
+	/*background: rgba(0,0,0,0.6);*/
+	width: 50px;
+	height: 50px;
+	z-index: 2;
+	padding: 0;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	opacity: 0;
+	/* color: #fff; */
+}
+	.har_top:hover {
+		text-decoration: none;
+		/* background: rgba(0,0,0,1);*/
+		color: #fff;
+	}
+	.har_top:focus, .har_top:active {
+		text-decoration: none;
+	}
+
+/*07.2 Map*/
+	
+	.har_footer_h2:after{
+		background:  #F05661 !important;
+		width: 100%;
+	}
+	
+	.a-logo-footer img {
+    width: 250px;
+    height: auto; }
+    
+
+
+
+/*===============================================*/
+/* 08. Inside Pages                              */
+/*===============================================*/
+/*Events Performers*/
+/*Albums Releases*/
+/*Single Album*/
+/*Portfolio Polaroid*/
+/*08.1 Portfolio*/
+.container-fluid h2 {
+	margin-top: 90px;
+}
+
+
+/*08.2 Pages Title*/
+
+/*08.3 Breadcrumbs*/
+
+/*08.4 Demos*/
+
+/*08.5 One Page Nav*/
+
+
+
+/*08.6 Blog*/
+
+/*08.7 Widgets*/
+
+/*08.8 Comments*/
+
+/*08.9 Masonry*/
+
+/*08.10 Projects*/
+
+/*08.11 Shop*/
+
+/*08.12 Tags*/
+
+/*08.13 Related Products*/
+
+/*08.14 Checkout*/
+
+/*08.15 Cart*/
+
+/*08.16 Single Products*/
+
+/*===============================================*/
+/* 09.Red  Demo                        */
+/*===============================================*/
+/*09.2 Slider Aligns*/
+/*09.3 Counters*/
+/*09.4 Events*/
+
+/*Red Blocks*/
+
+/*09.01 Video Background Black*/
+/*09.02 Video Player*/
+/*09.2 Studio Demo*/
+
+ 	/*09.02 Text Animation*/
+/*09.3 Image Background*/
+/*Slider Background*/
+/*Footer Flikr*/
+
+
+
+/*===============================================*/
+/* 10. Mobile, Tablet                            */
+/*===============================================*/
+@media (max-width: 1350px) {
+	/*Shop Playlist*/
+/*Playlist Header*/
+}
+@media (max-width: 1200px) {
+	/*Shop playlist*/
+		/*Playlist Header*/
+}
+/*Responsive*/
+@media (max-width:1100px) {
+/*Shop Playlist*/
+}
+
+@media (max-width:1000px){
+/*Slider Text Imagr Background*/
+		/*Playlist Header*/
+/*Countdown*/
+
+
+
+/*Shop*/
+.har_shop_item_cover {
+	margin:0 auto!important;
+}
+.har_shop_al_item {
+	width: auto;
+}
+.har_shop_item_env {
+	display: none;
+}
+.har_shop_al_item_bl:hover .har_shop_item_cover {
+	margin-left: 23px;
+}
+
+
+.har_logo_eq {
+	top: 6px;
+}
+.har_top_menu  {
+	display: none;
+}
+.har_fixed {
+	background-attachment:scroll!important;
+}
+.har_section {
+	text-align: center;
+}
+	.har_icon_box h4:after {
+		margin-left: auto;
+		margin-right: auto;
+	}
+.har_slide_title {
+	font:900 40px Raleway, Arial;
+	width: 100%;
+	text-align: center;
+}
+	.har_slide_title:after{
+		margin: 20px auto;
+	}
+.har_slide_txt {
+	width: 100%;
+	left: 0;
+	top: 50%;
+	transform:translateY(-50%);
+	padding: 0 10px;
+}
+
+.har_section .container {
+	padding-top: 56px;
+	padding-bottom: 46px;
+}
+.text-left {
+	text-align: center;
+}
+
+header nav {
+	height: 52px;
+	background: rgba(255,255,255,0.7);
+}
+.har_icon_box:last-child,
+.har_icon_box {
+	margin-bottom: 30px;
+}
+header nav.har_transp_nav {
+	background: none;
+}
+.har_logo {
+	top: 5px;
+	z-index: 3;
+}
+.har_top {
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	right: 15px;
+	bottom: 20px;
+}
+
+.har_middle_titles h2 {
+	font:900 30px Raleway, Arial;
+}
+h2:after {
+	margin-left: auto;
+	margin-right: auto;
+}
+form {
+	margin-bottom: 20px;
+}
+.har_icon_boxes {
+	margin-top: 0;
+}
+.har_icon_box:last-child {
+	margin-bottom: 0;
+}
+footer {
+	text-align: center;
+}
+/*Inside Pages*/
+
+/* 10.1Mobile Top Menu*/
+.har_top_menu {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding-top: 50px;
+}
+.har_top_menu_cont:after {
+	display: block;
+	content: '';
+	width: 100%;
+	height: 52px;
+	background: #000;
+	left: 0;
+	right: 0;
+	top: 0;
+	position: fixed;
+}
+.har_top_menu_cont {
+	background: rgba(0,0,0,0.95);
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: auto;
+	display: none;
+}
+.har_top_menu > li > a {
+	padding: 13px 25px;
+	height: 52px;
+	color: #fff!important;
+}
+.har_top_menu > li > a:before {
+	display: none!important;
+}
+.har_transp_nav .har_top_menu li:hover > a:before {
+	display: none;
+}
+header nav ul.har_top_menu li {
+	float: none;
+	height: auto;
+}
+/*Mobile Menu*/
+.har_top_menu_mobile_link {
+	color: white;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 18px;
+	padding: 15px;
+	display: none;
+	cursor: pointer;
+	z-index: 3;
+}
+
+.har_top_menu_mobile_link {
+	display: block;
+	right: 0;
+}
+/*Portfolio*/
+/*Text Align*/
+.har_slide_txt {
+	text-align: center;
+	bottom: auto;
+	top: 50%;
+	transform:translateY(-50%);
+	left: 0;
+}
+/*Header Login Form*/
+
+}
+@media (max-width:992px){
+	/*Shop Playlist*/
+
+
+/*10.2 Tablet*/
+.har_slide_txt{ 
+}
+.har_logo img{
+	    max-height: 30px !important;
+}
+}
+@media (max-width:800px) {
+		/*Playlist Header*/
+}
+@media (max-width:650px){
+
+		/*Playlist Header*/
+
+}
+@media (max-width:568px){
+	/*Slider Text Imagr Background*/
+.har_middle_titles h2 {
+	font-size: 24px;
+}
+	.har_top_menu > li > a {
+		padding: 13px 16px;
+	}
+
+}
+
+
+@media (max-width:480px){
+	/*Header disk*/
+	.har_top_menu > li > a {
+		padding: 13px 16px;
+	}
+}
+@media (max-width: 400px) {
+
+/*Slider Text Imagr Background*/
+.har_icon_box_photo {
+	height: 260px;
+}
+}
+@media (max-width: 360px) {
+/*Header disk*/
+
+.har_icon_box_photo {
+   height: 350px;
+}
+.har_icon_box_photo img {
+	 height: initial;
+}
+.har_slide_title {
+	font-size: 24px;
+}
+}
+@charset "UTF-8";
+
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.5.1
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2016 Daniel Eden
+ */
+/* Gestion de colores */
+/* Letras
+Raleway = font-family: 'Raleway', sans-serif;
+Open Sans = font-family: 'Open Sans', sans-serif; */
+html {
+  font-size: 15px !important; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px !important;
+  color: #111111; }
+  
+.bold {
+  font-weight: 600;
+}
+.margin-top-2{
+  margin-top:2rem;
+}
+.padding-top-2{
+  padding-top:2rem;
+}
+.padding-top-bottom-2{
+  padding: 2rem 0;
+}
+.padding-top-bottom-1{
+  padding: 1rem 0;
+}
+
+.reproductor_spotify_bottom{
+  width: 100%;
+  min-width: 320px;
+  height: 80px;
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  
+}
+  
+
+.bienvenidos {
+  height: 70vh;
+  /*background-color: #459FFF;*/
+  /* background: url("../images/watch-dogs-2-20166820154_1.jpg") no-repeat center top; */
+  color: #FFFFEF;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+  
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+/* Estilos para los botones */
+
+.texto-encabezado {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+.display-4 {
+  font-size: 3rem; 
+  margin-left: 2rem;
+  margin-right: 2rem; 
+  
+}
+   
+/* Section video */
+
+/* Section disco */
+
+.texto-disco .info-general {
+  margin: 1rem 0; }
+
+/* Section Calendario */
+
+/* Footer */
+
+/*---------------------------
+Discos
+---------------------------*/
+.discografia {
+  margin: 2rem 0; }
+
+
+
+.disco-info {
+  position: relative;
+  margin: 0.5rem;
+  padding-bottom: 100%; }
+
+.disco-info a {
+  text-decoration: none; }
+
+.disco-info a:hover,
+.disco-info a:active {
+  text-decoration: none;
+  color: #111111; }
+
+.disco-info img {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.disco-info .texto {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(240, 86, 97, 0.78);
+  font-size: 1.5rem;
+    color: white;
+  
+}
+
+.disco-info:hover .texto {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; 
+  
+}
+
+.discoCompleto{
+  padding-top: 0.5rem ;
+  padding-bottom: 0.5rem ;
+}
+
+.texto-evento{
+  margin-bottom: 2rem;
+}
+
+.texto-disco .image, .texto-evento .image{
+  margin-top: -50px
+}
+
+.texto-disco .image img, .texto-evento .image img{
+  margin: 0 auto;
+}
+
+.info-container .informacion .anno_banda {
+  border-bottom: 2px solid #F05661;
+}
+
+.titulo_disco_completo{
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.contenido_ficha_tecnica .item_ficha_tecnica{
+  margin-bottom:1.3rem;
+}
+
+.contenido_ficha_tecnica .item_ficha_tecnica .nombre{
+  text-transform: uppercase;
+}
+.contenido_ficha_tecnica .item_ficha_tecnica .valores{
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.card{
+  margin: 0.5rem 1.5rem;
+  border-bottom: 0.5px solid rgba(69,74,77,0.2);
+}
+
+.card .card_link{
+  color:black;
+}
+
+.card .card_link:hover, .card .card_link:focus, .card .card_link:active{
+  outline:none;
+  text-decoration:none;
+  color:#F05661;
+}
+
+.card .titulo_cancion_DC{
+  font-size:1.3rem;
+  font-weight: bold;
+}
+
+.discoCompleto .reproductor_disponible{
+  background-color: rgba(69,74,77,0.2);
+}
+
+.discoCompleto .disponible_en_div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap:wrap;
+  padding:1rem 0;
+}
+
+
+.discoCompleto .disponible_content{
+  text-align: center;
+}
+
+.discoCompleto .disponible_content .disponible_titulo{
+  margin: 10px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.discoCompleto .disponible_link{
+  text-decoration: none;
+  text-align: center;
+  margin: 0 0.3rem;
+}
+
+.discoCompleto .disponible_icon{
+  /*max-height: 40px; */
+    max-width: 100px;
+    /* width: auto; */
+    height: auto;
+    margin: 0.5rem 0.1rem;
+}
+
+/*---------------------------
+Calendario
+---------------------------*/
+.calendarioComp {
+  padding: 3rem 0; }
+
+.calendarioComp .link-evento,
+.calendarioComp .link-evento:hover {
+  text-decoration: none;
+  color: #111111; }
+
+.calendarioComp .link-row:hover {
+  background: rgba(240, 86, 97, 0.78); }
+
+.calendarioComp .link-row {
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: solid .1rem black; }
+  
+  
+  
+.info_especifica_div{
+  border-top:2px solid #F05661;
+  border-bottom:2px solid #F05661;
+}
+
+.info_especifica_p{
+  padding: 0 1rem;
+  margin:0 !important;
+}
+
+.info_especifica_p .color_principal{
+  color: #F05661;
+  font-weight:bold;
+}
+.info_especifica_p a{
+  text-decoration:underline;
+  color:black;
+}
+
+.links_eventos{
+  text-align:center;
+  font-size: 2rem;
+  padding:1rem 0;
+}
+.icono_evento{
+  margin:0 1rem;
+}
+.icono_evento:hover{
+  color:#F05661;
+}
+
+.proximamente_eventos{
+  text-align:center;
+  font-size: 2rem;
+  padding:1rem 0;
+}
+
+/*---------------------------
+Contacto
+---------------------------*/
+.contacto {
+  padding: 3rem 0; }
+
+.contacto form {
+  max-width: 700px;
+  margin: 0 auto; }
+
+.contacto form input {
+  border: 0.2rem solid #F05661;
+  padding: 0.3rem;
+  width: 100%; }
+
+.contacto form input:focus {
+  outline: none;
+  border-color: #f4989e; }
+
+.contacto form label {
+  display: block;
+  margin-bottom: 1rem; }
+
+.contacto form label span {
+  display: block; }
+
+.contacto form .info_contacto label {
+  width: 100%; }
+
+.contacto form .boton_enviar {
+  text-align: right; }
+
+.contacto form .boton {
+  background: #F05661;
+  color: #FFFFEF;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  width: 33%; }
+
+.contacto form .boton:hover {
+  background: #f4989e; }
+
+/*---------------------------
+Gracias
+---------------------------*/
+
+/* at start */
+
+/* animate in */
+
+/* animate out */
+
+/* Dark overlay, start state */
+/* animate in */
+/* animate out */
+
+
+
+/*-------------------------------------------------------------
+Biografía
+--------------------------------------------------------------*/
+
+.sin_padding{
+  padding: 0;
+}
+
+.imagen_media_pantalla_div{
+    width:100%;
+    max-width:100%;
+    margin:0;
+    height: 100%;
+  }
+  
+  .imagen_media_pantalla{
+    width:100%;
+    max-width:100%;
+    margin:0;
+    height: 100%;
+  }
+  
+.texto_biografia{
+  padding: 1rem;
+  text-align: justify;
+  align-self: center;
+}
+
+.card_bio{
+  display: block;
+  align-items: normal;
+}
+.titulo_bio{
+ text-align:center;
+ font-weight:bold;
+ font-size:1.5em;
+}
+
+/*-------------------------------------------------------------
+Prensa
+--------------------------------------------------------------*/
+
+.prensa .center{
+  width: 100%;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.prensa{
+  background-color: #ffdbcc;
+  padding-top: 3rem;
+}
+.prensa .pastilla_prensa{
+}
+.prensa .pastilla_prensa .pastilla_grande{
+  min-height: 50vh;
+  max-height: 60vh;
+  width: auto;
+}
+.prensa .pastilla_prensa .title{
+  display: inline;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  
+}
+.prensa .logo_prensa .lalala_grande{
+  min-width: 50%;
+  max-width: 60%;
+  height: auto;
+}
+
+/*-------------------------------------------------------------
+Media Queries
+--------------------------------------------------------------*/
+@media (min-width: 470px) {
+  /*---------------------------
+  Imagen Disco
+  ----------------------------*/ }
+@media (min-width: 768px) {
+  html {
+    font-size: 17px !important; }
+
+  .texto-disco .image, .texto-evento .image{
+    margin-top: -20px
+  }
+  
+  .reproductor_spotify_bottom{
+  width: 40%;
+    
+  }
+  
+  /*---------------------------
+  Imagen Disco
+  ----------------------------*/
+
+  /*---------------------------
+  Footer
+  ----------------------------*/ 
+  
+  .discoCompleto .reproductor_disponible_flex{
+    display: flex;
+  }
+  
+  
+  /*-------------------------------------------------------------
+  Biografía
+  --------------------------------------------------------------*/
+  .card_bio{
+    display: flex;
+  }
+  
+  .orden_derecha_primero{
+    order:1;
+  }
+  
+  .orden_derecha_segundo{
+    order:2;
+  }
+  
+  /*-------------------------------------------------------------
+  Prensa
+  --------------------------------------------------------------*/
+  
+  
+  
+}
+@media (min-width: 992px) {
+  /*---------------------------
+  Header
+  ----------------------------*/
+  .bienvenidos {
+    height: 50vh;
+  }
+  .bigimage {
+    height: 100vh !important;
+  }
+  .texto-disco .image, .texto-evento .image {
+    margin-top: -70px;
+  }
+
+  /*---------------------------
+  Seccion Video
+  ----------------------------*/
+
+  /*---------------------------
+  Imagen Disco
+  ----------------------------*/
+
+
+.disco-container {
+  padding: 0; }
+
+
+
+  /*---------------------------
+  Footer
+  ----------------------------*/ }
+@media (min-width: 1200px) {
+  body {
+    font-size: large !important; }
+
+  /*---------------------------
+  Header
+  ----------------------------*/ }
+@media (min-width: 2000px) {
+  body {
+    font-size: x-large !important; }
+
+  /*---------------------------
+  Header
+  ----------------------------*/
+
+  /*---------------------------
+  Seccion Video
+  ----------------------------*/
+
+  /*---------------------------
+  Imagen Disco
+  ----------------------------*/
+
+  /*---------------------------
+  Container
+  ----------------------------*/
+  .container {
+    width: 1600px; } }
+@media (min-width: 4000px) {
+  body {
+    font-size: 40px !important; }
+
+  /*---------------------------
+  Header
+  ----------------------------*/
+
+  /*---------------------------
+  Seccion Video
+  ----------------------------*/
+
+  /*---------------------------
+  Imagen Disco
+  ----------------------------*/
+
+  /*---------------------------
+  Container
+  ----------------------------*/
+  .container {
+    width: 2500px; }
+
+  /*---------------------------
+  Footer
+  ----------------------------*/
+
+  /*---------------------------
+  Contacto
+  ---------------------------*/
+  .contacto form {
+    max-width: 2000px;
+    margin: 0 auto; } }
+
+/*# sourceMappingURL=estilos.css.map */
+
+/*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ *//*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}article,footer,header,main,nav,section{display:block}a{background-color:transparent}a:active,a:hover{outline:0}b,strong{font-weight:700}h1{margin:.67em 0;font-size:2em}img{border:0}input{margin:0;font:inherit;color:inherit}input[type=submit]{-webkit-appearance:button;cursor:pointer}input::-moz-focus-inner{padding:0;border:0}input{line-height:normal}/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */@media print{*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;-webkit-box-shadow:none!important;box-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}a[href^="#"]:after{content:""}img{page-break-inside:avoid}img{max-width:100%!important}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}}@font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:focus,a:hover{color:#23527c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}h1,h2,h3,h4{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1,h2,h3{margin-top:20px;margin-bottom:10px}h4{margin-top:10px;margin-bottom:10px}h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:18px}p{margin:0 0 10px}.text-left{text-align:left}.text-center{text-align:center}ul{margin-top:0;margin-bottom:10px}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row{margin-right:-15px;margin-left:-15px}.col-lg-6,.col-md-12,.col-md-4,.col-md-6,.col-md-8,.col-sm-12,.col-sm-4,.col-sm-6,.col-xs-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px}.col-xs-12{float:left}.col-xs-12{width:100%}@media (min-width:768px){.col-sm-12,.col-sm-4,.col-sm-6{float:left}.col-sm-12{width:100%}.col-sm-6{width:50%}.col-sm-4{width:33.33333333%}}@media (min-width:992px){.col-md-12,.col-md-4,.col-md-6,.col-md-8{float:left}.col-md-12{width:100%}.col-md-8{width:66.66666667%}.col-md-6{width:50%}.col-md-4{width:33.33333333%}.col-md-offset-2{margin-left:16.66666667%}}@media (min-width:1200px){.col-lg-6{float:left}.col-lg-6{width:50%}}label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700}.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px}.btn:active:focus,.btn:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}.btn:focus,.btn:hover{color:#333;text-decoration:none}.btn:active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}.collapse{display:none}.container-fluid:after,.container-fluid:before,.container:after,.container:before,.row:after,.row:before{display:table;content:" "}.container-fluid:after,.container:after,.row:after{clear:both}@-ms-viewport{width:device-width}
+
+ /*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */.btn:active{background-image:none}/*!
+ * Bootstrap Docs (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under the Creative Commons Attribution 3.0 Unported License. For
+ * details, see https://creativecommons.org/licenses/by/3.0/.
+ */body{position:relative}:hover>.anchorjs-link{opacity:.75;-webkit-transition:color .16s linear;-o-transition:color .16s linear;transition:color .16s linear}:hover>.anchorjs-link:hover{text-decoration:none;opacity:1}
+
+
+
+ /* Magnific Popup CSS */
+
+/* Main image in popup */
+
+/* The shadow behind the image */
+
+@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+  /**
+       * Remove all paddings around the image on small screen
+       */
+ }
+
+
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+/* display none until init */
+
+/* mouse grab icon */
+
+/* fix */
+
+/*
+* 	Owl Carousel Owl Demo Theme 
+*	v1.3.3
+*/
+
+/* Styling Next and Prev buttons */
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+
+/* Styling Pagination*/
+
+/* If PaginationNumbers is true */
+
+/* preloading images */
+
+
+/* 
+ *  Owl Carousel CSS3 Transitions 
+ *  v1.3.2
+ */
+/* fade */
+
+/* easyy */
+
+/* backSlide */
+/* goDown */
+/* scaleUp */
+/* Keyframes */
+/*empty*/
+@charset"UTF-8";@font-face{font-family:ytpregular;src:url(font/ytp-regular.eot)}@font-face{font-family:ytpregular;src:url(data:application/x-font-woff;charset=utf-8;base64,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)format('woff'),url(font/ytp-regular.ttf)format('truetype');font-weight:400;font-style:normal}
+/**
+ * Owl Carousel v2.2.0
+ * Copyright 2013-2016 David Deutsch
+ * Licensed under MIT (https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE)
+ */

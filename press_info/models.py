@@ -16,22 +16,6 @@ class Press_Info(models.Model):
     class Meta:
         ordering = ["-fecha_salida"]
         
-class Integrante(models.Model):
-    nombre = models.CharField('Nombre',max_length=30,)
-    instrumento = models.CharField('Instrumento',max_length=30,)
-    imagen = models.ImageField(upload_to='media/integrante/')
-    fecha_salida = models.DateField(auto_now=False, auto_now_add=False,)
-    id_pagina = models.CharField('Id_pagina',max_length=30,)
-    biografia = models.TextField()
-    
-    def __str__(self):
-        return str(self.nombre + ' : ' + str(self.fecha_salida))
-        
-    def __unicode__(self):
-        return str(self.nombre + ' : ' + str(self.fecha_salida))
-        
-    class Meta:
-        ordering = ["-fecha_salida"]
         
 class Foto(models.Model):
     nombre = models.CharField('Nombre',max_length=100,)

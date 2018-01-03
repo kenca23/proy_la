@@ -6113,6 +6113,7 @@ left:15%;
 .har_without_after .trak-item .name-artist h3 {
 	font-size: 12px;
 }
+}
 @media (max-width: 1200px) {
 	/*Shop playlist*/
 .playlist-wrapper.har_shop_player .trak-item .additional-button {

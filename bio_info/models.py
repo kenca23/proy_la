@@ -7,7 +7,10 @@ class Miembro(models.Model):
     nombre = models.CharField('Nombre',max_length=30,)
     instrumento = models.CharField('Instrumento',max_length=30,)
     imagen = models.ImageField(upload_to='media/biografia/')
+    imagen_home = models.ImageField(upload_to='media/home/')
+    imagen_prensa = models.ImageField(upload_to='media/prensa/')
     biografia = models.TextField()
+    id_pagina = models.CharField('Id_pagina',max_length=30,)
     fecha_salida = models.DateField(auto_now=False, auto_now_add=False,)
     
     def __str__(self):
