@@ -35,9 +35,11 @@ class Foto(models.Model):
         
         
 class Video(models.Model):
-    nombre = models.CharField(max_length=75, )
+    nombre = models.CharField(max_length=100, )
+    descripcion = models.CharField('Descripción',max_length=200,null=True,blank=True,)
     url = models.CharField(max_length=50, )
     fecha_salida = models.DateField(auto_now=False, auto_now_add=False,)
+    imagen = models.ImageField(upload_to='media/video_prensa/')
     
 
     def __str__(self):

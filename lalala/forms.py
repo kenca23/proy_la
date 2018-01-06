@@ -14,3 +14,14 @@ class ContactForm(forms.Form):
         widget=forms.Textarea,
         max_length=600
     )
+    
+    
+class PrensaForm(forms.Form):
+    nombre = forms.CharField(required=True, max_length=35)
+    email = forms.EmailField(required=True)
+    asunto = forms.CharField(required=True, max_length=35)
+    content = forms.CharField(
+        required=True,
+        widget=forms.Textarea,
+        max_length=600
+    )
