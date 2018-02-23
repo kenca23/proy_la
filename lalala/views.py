@@ -12,13 +12,13 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.views import View
 
 
-from musica.models import Disco, Video
+from musica.models import Disco, Video as videoHome
 from eventos.models import Evento
 from .forms import ContactForm, PrensaForm
 from subscriber.forms import SubscriberForm
 from shared.models import Imagen_Pagina
 from bio_info.models import Banda, Miembro
-from press_info.models import Foto, Video, Press_Info, Enlace
+from press_info.models import Foto, Video as videoPrensa, Press_Info, Enlace
 
 
 
@@ -26,7 +26,7 @@ def home(request):
     today = datetime.datetime.today()
     queryset = Disco.objects.all().order_by('-id')[:3]
     querysetEv = Evento.objects.filter(fecha__gte=datetime.datetime.today().date()).order_by('fecha')[0:6]
-    videos = Video.objects.filter(fecha_salida__lte=datetime.datetime.today().date()).order_by('-fecha_salida')[0:5]
+    videos = videoHome.objects.filter(fecha_salida__lte=datetime.datetime.today().date()).order_by('-fecha_salida')[0:5]
     kevin = Miembro.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kevin Calvo')).order_by('-fecha_salida').first()
     kenneth = Miembro.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kenneth Calvo')).order_by('-fecha_salida').first()
     bob = Miembro.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Roberto Cruz')).order_by('-fecha_salida').first()
@@ -126,7 +126,8 @@ def Prensa(request):
     	kennethcalvo = Miembro.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Kenneth Calvo')).order_by('-fecha_salida').first()
     	robertocruz = Miembro.objects.filter(Q(fecha_salida__lte=today) & Q(nombre='Roberto Cruz')).order_by('-fecha_salida').first()
     	fotos = Foto.objects.filter(fecha_salida__lte=today).order_by('-fecha_salida') [0:15]
-    	videos = Video.objects.filter(fecha_salida__lte=today).order_by('-fecha_salida')
+    	videosHome = videoHome.objects.filter(fecha_salida__lte=datetime.datetime.today().date()).order_by('-fecha_salida')[0:10]
+    	videos = videoPrensa.objects.filter(fecha_salida__lte=today).order_by('-fecha_salida')[0:10]
     	
     	urlImagen = imagen.imagen
     	content = {
@@ -137,6 +138,7 @@ def Prensa(request):
     	'kenneth' : kennethcalvo,
     	'bob' : robertocruz,
     	'fotos': fotos,
+    	'videoHome': videosHome,
     	'videos' : videos,
     	'form' : form_class,
     	}

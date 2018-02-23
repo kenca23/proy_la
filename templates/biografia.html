@@ -10,55 +10,62 @@
     <article class="texto-disco">
         <!-- Banda -->
         <div class="container-fluid sin_padding card_bio">
-            <div class=" col-lg-6 sin_padding">
+            <div class="row card_bio sin_margin">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 sin_padding">
                 <div class="imagen_media_pantalla_div">
                     <img src="{{ MEDIA_URL }}{{ banda.imagen.url }}" class="imagen_media_pantalla img img-responsive full-width" alt="Foto de biografía de la banda Lalalá">
                 </div>    
             </div>
-            <div class=" col-lg-6 sin_padding texto_biografia">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 sin_padding texto_biografia">
                 {{ banda.biografia|linebreaksbr }}
+            </div>
             </div>
         </div>
         
         
         <!-- Kevin Calvo -->
         <div class="container-fluid sin_padding card_bio" id="{{kevin.id_pagina}}">
-            <div class="col-lg-6 sin_padding orden_derecha_segundo">
+            <div class="row card_bio sin_margin">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 sin_padding orden_derecha_segundo">
                 <div class="imagen_media_pantalla_div">
                     <img src="{{ MEDIA_URL }}{{ kevin.imagen.url }}" class="imagen_media_pantalla img img-responsive full-width" alt="Foto de biografía de {{kevin.nombre}}">
                 </div>    
             </div>
-            <div class="col-lg-6 sin_padding texto_biografia orden_derecha_primero">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 sin_padding texto_biografia orden_derecha_primero">
                 <h3 class="titulo_bio">{{ kevin.nombre }} | {{ kevin.instrumento }}</h3>
                 {{ kevin.biografia|escape|linebreaks }}
             </div>
-            
+            </div>
         </div>
         
         <!-- Roberto Cruz -->
         
         <div class="container-fluid sin_padding card_bio" id="{{bob.id_pagina}}">
-            <div class="col-lg-6 sin_padding">
+            <div class="row card_bio sin_margin">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 sin_padding">
                 <div class="imagen_media_pantalla_div">
                     <img src="{{ MEDIA_URL }}{{ bob.imagen.url }}" class="imagen_media_pantalla img img-responsive full-width" alt="Foto de biografía de {{bob.nombre}}">
                 </div>    
             </div>
-            <div class="col-lg-6 sin_padding texto_biografia">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 sin_padding texto_biografia">
                 <h3 class="titulo_bio">{{ bob.nombre }} | {{ bob.instrumento }}</h3>
                 {{ bob.biografia|escape|linebreaks }}
+            </div>
             </div>
         </div>
         
         <!-- Kenneth Calvo -->
         <div class="container-fluid sin_padding card_bio" id="{{kenneth.id_pagina}}">
-            <div class="col-lg-6 sin_padding orden_derecha_segundo">
+            <div class="row card_bio sin_margin">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 sin_padding orden_derecha_segundo">
                 <div class="imagen_media_pantalla_div">
                     <img src="{{ MEDIA_URL }}{{ kenneth.imagen.url }}" class="imagen_media_pantalla img img-responsive full-width" alt="Foto de biografía de {{kenneth.nombre}}">
                 </div>    
             </div>
-            <div class="col-lg-6 sin_padding texto_biografia orden_derecha_primero">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 sin_padding texto_biografia orden_derecha_primero">
                 <h3 class="titulo_bio">{{ kenneth.nombre }} | {{ kenneth.instrumento }}</h3>
                 {{ kenneth.biografia|escape|linebreaks }}
+            </div>
             </div>
         </div>
         

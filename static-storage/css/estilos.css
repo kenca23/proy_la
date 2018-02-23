@@ -36,6 +36,9 @@ body {
   
 }
   
+  .sin_margin{
+    margin:0;
+  }
 
 .bienvenidos {
   height: 70vh;
@@ -262,6 +265,28 @@ body {
 .disco .container .boton-disco {
   margin: 4rem 0;
   text-align: center; }
+  
+.div_compartir{
+  text-align: center;
+  padding: 1rem 0;
+}
+  
+.compartir{
+  padding:1rem;
+  color:black;
+  font-size: 2rem;
+}
+.compartir_icon:hover{
+  color:#F05661 !important;
+}
+.titulo_compartir{
+  font-size: 1.3em !important;
+    font-weight: bold;
+}
+
+  
+  
+  
 
 /* Section Calendario */
 .calendario {
@@ -534,7 +559,6 @@ Discos
 
 .discoCompleto{
   padding-top: 0.5rem ;
-  padding-bottom: 0.5rem ;
 }
 
 .texto-evento{
@@ -591,7 +615,7 @@ Discos
   font-weight: bold;
 }
 
-.discoCompleto .reproductor_disponible{
+.discoCompleto .fondo_gris{
   background-color: rgba(69,74,77,0.2);
 }
 

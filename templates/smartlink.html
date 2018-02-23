@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lalalá | Dragón Jazmín</title>
+    <meta name="keywords" content="Lalalá, {{ smartlink.nombre }}">
+    <meta name="description" content="Lista de reproductores de {{ smartlink.nombre }} - Lalalá">
+    <meta name="application-name" content="Lalalá | {{ smartlink.nombre }}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/smartlink.css' %}" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+    <!-- Facebook Pixel Code 
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '151264735522283');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=151264735522283&ev=PageView&noscript=1"
+    /></noscript>-->
+    <!-- End Facebook Pixel Code -->
+    <!-- Global site tag (gtag.js) - Google Analytics 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110072821-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-110072821-1');
+    </script>
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "MusicGroup",
+          "name": "Lalalá",
+          "url": "http://www.lalalaoficial.com",
+          "logo": "http://www.lalalaoficial.com/assets/logo.png",
+          "sameAs": [
+            "http://www.facebook.com/BandaLalala",
+            "http://instagram.com/bandalalala",
+            "http://youtube/channel/UCEbntBDO3yasWFSbF9lf9Wg",
+            "https://open.spotify.com/artist/2x9kapEnxAcdMOAsDwFAWg"
+          ]
+        }
+    </script>-->
+  
+</head>
+<body>
+    <!--<script>
+        fbq('track', 'ViewContent'); src="{% static 'icons/lalala-logo.svg' %}"
+    </script>-->
+    <section class="main background-image" style="background-color: #{{smartlink.colorFondo}}">
+        <div class="container">
+            <div class="offset-sm-4 col-sm-4 disc-image divs">
+                <img class="responsive" src="{{ MEDIA_URL }}{{ smartlink.imagen.url }}" alt="Lalalá | Dragón Jazmín">
+            </div>
+            <div class="offset-sm-4 col-sm-4 header divs">
+                <div class="header-info">
+                    <h5 class="header-title">Lalalá | Dragón Jazmín</h5>
+                    <p class="header-p">Elija su plataforma favorita</p>
+                </div>
+                <div class="arrow"></div>
+            </div>
+            <div class="offset-sm-4 col-sm-4 platforms divs">
+                
+            {% for link in links %}
+                <div class="platform">
+                {% if link.plataforma == "Spotify" %}
+                    <a href="https://open.spotify.com/album/{{link.link}}" data-uri="spotify:album:{{link.link}}" data-player="spotify" data-servicetype="play" data-apptype="manual" class="link-platform redirect">
+                        <img class="image-platform" src="{% static 'icons/smartlink/spotify.svg' %}" alt="Spotify">
+                        <span class="span-platform">Play</span>
+                    </a>
+                {% elif link.plataforma == "Apple Music" %}
+                
+                    <a href="{{link.link}}" data-player="applemusic" data-servicetype="play" data-apptype="manual" class="link-platform redirect">
+                        <img class="image-platform" src="{% static 'icons/smartlink/apple-music.svg' %}" alt="Apple Music">
+                        <span class="span-platform">Play</span>
+                    </a>
+                {% elif link.plataforma == "iTunes" %}    
+                    
+                    <a href="{{link.link}}" data-player="itunes" data-servicetype="play" data-apptype="manual" class="link-platform redirect">
+                        <img class="image-platform" src="{% static 'icons/smartlink/apple-itunes.svg' %}" alt="iTunes">
+                        <span class="span-platform">Descargar</span>
+                    </a>
+                {% elif link.plataforma == "Deezer" %}    
+                    
+                    <a href="{{link.link}}" data-player="deezer" data-servicetype="play" data-apptype="manual" class="link-platform redirect">
+                        <img class="image-platform" src="{% static 'icons/smartlink/deezer.svg' %}" alt="Deezer">
+                        <span class="span-platform">Play</span>
+                    </a>
+                    
+                {% elif link.plataforma == "Google Play Music" %}
+                
+                    <a href="{{link.link}}" data-player="googleplaymusic" data-servicetype="play" data-apptype="manual" class="link-platform redirect">
+                        <img class="image-platform" src="{% static 'icons/smartlink/google-play-music.svg' %}" alt="Google Play Music">
+                        <span class="span-platform">Play</span>
+                    </a>
+                    
+                 {% elif link.plataforma == "BandCamp" %}   
+                    <a href="{{link.link}}" data-player="bandcamp" data-servicetype="play" data-apptype="manual"  class="link-platform redirect">
+                        <img class="image-platform" src="{% static 'icons/smartlink/bandcamp.svg' %}" alt="Bandcamp">
+                        <span class="span-platform">Descargar</span>
+                    </a>
+                    
+                {% elif link.plataforma == "Amazon Music" %}    
+                    <a href="{{link.link}}" data-player="amazon-music" data-servicetype="play" data-apptype="manual"  class="link-platform redirect">
+                        <img class="image-platform" src="{% static 'icons/smartlink/amazon-music.svg' %}" alt="Amazon Music">
+                        <span class="span-platform">Descargar</span>
+                    </a>
+                    
+                {% elif link.plataforma == "Napster" %}   
+                    <a href="{{link.link}}" data-player="napster" data-servicetype="play" data-apptype="manual"  class="link-platform redirect">
+                        <img class="image-platform" src="{% static 'icons/smartlink/napster.svg' %}" alt="Napster">
+                        <span class="span-platform">Play</span>
+                    </a>
+                {% endif %}
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+    <iframe id="URI_detectado" src="" style="display:none"></iframe>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>    
+    <script type="text/javascript">
+        var _0x21c8=["\x55\x52\x49\x5F\x64\x65\x74\x65\x63\x74\x61\x64\x6F","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x72\x65\x64\x69\x72\x65\x63\x74","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x73\x42\x79\x43\x6C\x61\x73\x73\x4E\x61\x6D\x65","\x6C\x65\x6E\x67\x74\x68","\x73\x65\x72\x76\x69\x63\x65\x73","\x63\x6C\x69\x63\x6B","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74","\x63\x6C\x69\x63\x6B\x65\x64","\x68\x72\x65\x66","\x68\x61\x73\x41\x74\x74\x72\x69\x62\x75\x74\x65","\x74\x61\x72\x67\x65\x74","\x64\x61\x74\x61\x2D\x75\x72\x69","\x67\x65\x74\x41\x74\x74\x72\x69\x62\x75\x74\x65","\x64\x61\x74\x61\x2D\x70\x6C\x61\x79\x65\x72","\x64\x61\x74\x61\x2D\x61\x70\x70\x74\x79\x70\x65","\x64\x61\x74\x61\x2D\x73\x65\x72\x76\x69\x63\x65\x54\x79\x70\x65","\x64\x61\x74\x61\x2D\x73\x68\x6F\x77\x69\x64","\x75\x6E\x6B\x6E\x6F\x77\x6E","\x63\x68\x69\x6C\x64\x72\x65\x6E","\x74\x65\x78\x74\x43\x6F\x6E\x74\x65\x6E\x74","\x6D\x61\x6E\x75\x61\x6C","\x67\x6F\x74\x6F","\x69\x73\x44\x65\x73\x6B\x74\x6F\x70","\x5F\x62\x6C\x61\x6E\x6B","\x6F\x70\x65\x6E","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x74\x6F\x70","\x73\x72\x63","\x69\x66\x72\x61\x6D\x65\x54\x61\x72\x67\x65\x74","\x6F\x6E\x62\x6C\x75\x72","\x6F\x6E\x66\x6F\x63\x75\x73","\x76\x69\x73\x69\x74\x65\x64"];var linkplatform={clicked:false,iframeTarget:document[_0x21c8[1]](_0x21c8[0]),isDesktop:true,services:document[_0x21c8[3]](_0x21c8[2])};for(var i=0;i< linkplatform[_0x21c8[5]][_0x21c8[4]];i++){linkplatform[_0x21c8[5]][i][_0x21c8[7]](_0x21c8[6],redirectHandler,false)};function redirectHandler(_0xc00bx4){_0xc00bx4[_0x21c8[8]]();if(linkplatform[_0x21c8[9]]){return false};linkplatform[_0x21c8[9]]= true;setTimeout(function(){linkplatform[_0x21c8[9]]= false},3000);if(_0xc00bx4[_0x21c8[12]][_0x21c8[11]](_0x21c8[10])){var _0xc00bx5=_0xc00bx4[_0x21c8[12]]}else {var _0xc00bx5=this};var _0xc00bx6=_0xc00bx5[_0x21c8[14]](_0x21c8[13]);var _0xc00bx7=_0xc00bx5[_0x21c8[14]](_0x21c8[10]);var _0xc00bx8=_0xc00bx5[_0x21c8[14]](_0x21c8[15]); linkClicked(_0xc00bx8,"{{ smartlink.nombSmart }}");var _0xc00bx9=_0xc00bx5[_0x21c8[14]](_0x21c8[16]);var _0xc00bxa=_0xc00bx5[_0x21c8[14]](_0x21c8[17]);var _0xc00bxb=_0xc00bx5[_0x21c8[11]](_0x21c8[18])?_0xc00bx5[_0x21c8[14]](_0x21c8[18]):null;var _0xc00bxc=_0x21c8[19];if(_0xc00bx5[_0x21c8[20]][1]){_0xc00bxc= _0xc00bx5[_0x21c8[20]][1][_0x21c8[21]]};if(!_0xc00bx9|| _0xc00bx9[_0x21c8[4]]== 0){_0xc00bx9= _0x21c8[22]};if(!_0xc00bxa|| _0xc00bxa[_0x21c8[4]]== 0){_0xc00bxa= _0x21c8[23]};var _0xc00bxd=false;if(_0xc00bx5[_0x21c8[11]](_0x21c8[12])){_0xc00bxd= true};redirect(_0xc00bx7,_0xc00bx6,_0xc00bxd)}function redirect(_0xc00bx7,_0xc00bx6,_0xc00bxd){if(!_0xc00bx6|| _0xc00bx6[_0x21c8[4]]=== 0 || linkplatform[_0x21c8[24]]){if(_0xc00bxd){window[_0x21c8[26]](_0xc00bx7,_0x21c8[25]);return false}};var _0xc00bxf=false;if(!_0xc00bx6|| _0xc00bx6[_0x21c8[4]]=== 0){setTimeout(function(){window[_0x21c8[28]][_0x21c8[27]][_0x21c8[10]]= _0xc00bx7},300);return false};linkplatform[_0x21c8[30]][_0x21c8[29]]= _0xc00bx6;window[_0x21c8[31]]= function(){_0xc00bxf= true};window[_0x21c8[32]]= function(){linkplatform[_0x21c8[9]]= false;if(linkplatform[_0x21c8[33]]=== 0){window[_0x21c8[28]][_0x21c8[27]][_0x21c8[10]]= _0xc00bx7}};setTimeout(function(){if(_0xc00bxf== false){window[_0x21c8[28]][_0x21c8[27]][_0x21c8[10]]= _0xc00bx7}},300)}
+    
+    function linkClicked(player, nombSmart) {
+        var values = {'player': player}
+        ajaxRequest= $.ajax({
+            url: "saveurlclicks.php",
+            type: "post",
+            data: values
+        });
+                //$.get('./saveurlclicks.php', {'url': url})
+                return true;
+            }
+    </script>
+    
+</body>
+</html>

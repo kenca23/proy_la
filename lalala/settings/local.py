@@ -25,7 +25,7 @@ SECRET_KEY = '*neq69)r2d+lcqzlqh&=jambuq@cqth=7@%cg$8hbf-*0+3dw-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["pruebalalala.com","www.pruebalalala.com","www.lalalaoficial.com", "lalalaoficial.com", "lalala-oficial-kenca23.c9users.io", "127.0.0.1"]
+ALLOWED_HOSTS = ["www.lalalaoficial.com", "lalalaoficial.com", "127.0.0.1", "lalalaoficial-kenca23.c9users.io"]
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

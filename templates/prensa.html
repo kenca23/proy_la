@@ -102,6 +102,9 @@
             </div>
             <div class="col-md-offset-1 col-md-10">
                 <div class="galleria margin_auto">
+                    {% for video2 in videoHome %}
+                    <a href="http://www.youtube.com/watch?v={{video2.url}}"><img src="{{ MEDIA_URL }}{{video2.imagen.url}}" data-title="{{video2.nombre}}"></a>
+                    {% endfor %}
                     {% for video in videos %}
                     <a href="http://www.youtube.com/watch?v={{video.url}}"><img src="{{ MEDIA_URL }}{{video.imagen.url}}" data-title="{{video.nombre}}"></a>
                     {% endfor %}
@@ -119,19 +122,19 @@
             <div class="col-md-offset-1 col-md-10">
                 <ul class="lista_enlaces">
                     <li class="enlace_li">
-                        <a href="https://lalala-oficial-kenca23.c9users.io/facebook" target="_blank" class="enlace_a">
+                        <a href="https://lalalaoficial-kenca23.c9users.io/facebook" target="_blank" class="enlace_a">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                             Facebook
                         </a>
                     </li>
                     <li class="enlace_li">
-                        <a href="https://lalala-oficial-kenca23.c9users.io/twitter" target="_blank" class="enlace_a">
+                        <a href="https://lalalaoficial-kenca23.c9users.io/twitter" target="_blank" class="enlace_a">
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                             Twitter
                         </a>
                     </li>
                     <li class="enlace_li">
-                        <a href="https://lalala-oficial-kenca23.c9users.io/instagram" target="_blank" class="enlace_a">
+                        <a href="https://lalalaoficial-kenca23.c9users.io/instagram" target="_blank" class="enlace_a">
                             <i class="fa fa-instagram" aria-hidden="true"></i>
                             Instagram
                         </a>

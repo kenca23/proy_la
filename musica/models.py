@@ -120,3 +120,50 @@ class Video(models.Model):
 
     def __unicode__(self):
         return str(self.nombre)
+        
+class SmartLink(models.Model):
+    nombre = models.CharField(max_length=75,)
+    nombSmart = models.CharField(max_length=75,)
+    imagen = models.ImageField(upload_to='media/smartLink/')
+    colorFondo = models.CharField(max_length=6,)
+    
+    def __str__(self):
+        return str(self.nombre)
+
+    def __unicode__(self):
+        return str(self.nombre)
+        
+class Link_SmartLink(models.Model):
+    SPOTIFY = 'Spotify'
+    APMUSIC = 'Apple Music'
+    ITUNES = 'iTunes'
+    DEEZER = 'Deezer'
+    GOOGLE = 'Google Play Music'
+    BANDCAMP = 'BandCamp'
+    AMMUSIC = 'Amazon Music'
+    NAPSTER = 'Napster'
+    
+    DISPONIBLE = (
+        (SPOTIFY, 'Spotify'),
+        (APMUSIC, 'Apple Music'),
+        (ITUNES, 'iTunes'),
+        (DEEZER, 'Deezer'),
+        (GOOGLE, 'Google Play Music'),
+        (BANDCAMP, 'BandCamp'),
+        (AMMUSIC, 'Amazon Music'),
+        (NAPSTER, 'Napster'),
+    )
+    
+    smartlink = models.ForeignKey(SmartLink, on_delete=models.CASCADE)
+    plataforma = models.CharField(
+        max_length=17,
+        choices=DISPONIBLE,
+        default=SPOTIFY,
+    )
+    link = models.CharField(max_length=200,)
+    
+    def __str__(self):
+        return str(str(self.smartlink) + ' : ' + self.plataforma)
+
+    def __unicode__(self):
+        return str(str(self.smartlink) + ' : ' + self.plataforma)

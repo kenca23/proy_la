@@ -14,7 +14,7 @@
          <div class="container">
             <div class="har_slide_txt har_slide_left_middle text-left" data-0="opacity:1; margin-top:0px" data--400-bottom="opacity:0; margin-top:-100px">
 
-                <div class="har_slide_title">Lalalá<br>Jade</div>
+                <div class="har_slide_title">Lalalá<br>Dragón Jazmín</div>
 
             </div> 
         </div>
@@ -54,7 +54,7 @@
 
 
     <!-- section -->
-    <section class="har_section har_image_bck" data-color="#fafafa" id="featured">
+    <!--<section class="har_section har_image_bck" data-color="#fafafa" id="featured">
         <div class="container text-center">
 
             <h2>Discografía</h2>
@@ -62,37 +62,22 @@
 
             <div class="har_team_slider">
 
-               <!-- item -->
+               
                {% for obj in object_list %}
                <div class="har_shop_al_item_bl">
                     <a href="/discos/{{obj.nombDisco}}" class="har_shop_al_item">
                         <span class="har_shop_item_disk">
-                            <span class="har_shop_item_cover har_image_bck" data-image="{{ MEDIA_URL }}{{ obj.imagen.url }}">
-                             <!--SoundCloud-->
-                             <!--<iframe width="100%" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/211480627&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>-->
-                             </span>
+                            <span class="har_shop_item_cover har_image_bck" data-image="{{ MEDIA_URL }}{{ obj.imagen.url }}"></span>
                              <span class="har_shop_item_env"></span>
-                             <!--<span class="har_shop_item_vinyl">
-                                 <i class="ti ti-music-alt" aria-hidden="true"></i>
-                            </span>-->
                         </span>
                     </a>
                     <h4>{{obj.nombre}}</h4>
-                    <!--<span class="har_shop_desc">Disponible en</span>
-                    <span class="har_shop_price"></span>
-                    <span class="har_shop_soc_c">
-                        <a href="#"><i class="fa fa-spotify"></i></a>
-                        <a href="#"><i class="fa fa-youtube"></i></a>
-                        <a href="#"><i class="fa fa-headphones"></i></a>
-                    </span>-->
                 </div>
                 {% endfor %}
                 
             </div>
-            <!-- slider end -->
         </div>
-        <!-- container end -->
-    </section>
+    </section>-->
     <!-- section end -->
     
     

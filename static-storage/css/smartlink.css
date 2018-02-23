@@ -1,0 +1,110 @@
+.background-image{
+    
+    min-height: 100vh;
+    background-size: cover;
+}
+.divs {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 320px;
+}
+
+
+.disc-image img{
+    width: 100%;
+    height: auto;
+}
+
+.header{
+    background-color: #181818;
+    color: white;
+    text-align: center;
+}
+
+.header-title{
+    font-weight: 600;
+    padding: 0.5rem 0 0 0;
+}
+
+.header-p{
+    margin: 0;
+    padding: 0 0 0.5rem 0;
+}
+.arrow{
+    display: inline-block;
+    left: 50%;
+    margin-left: -12px;
+    margin-bottom: -12px;
+    width: 0;
+    height: 0;
+    top: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #181818;
+    float: left;
+    position: relative;
+    z-index: 10;
+}
+
+.platforms{
+    background-color: white;
+}
+
+.platforms .platform{
+    width: 100%;
+    padding: 2px 0;
+    border-bottom: 1px solid #f5f5f5;
+    transition: background-color .3s ease;
+    cursor: pointer;
+}
+.platforms .platform:hover {
+    transition: background-color .3s ease;
+    background-color: #f5f5f5;
+}
+
+.platforms .platform .link-platform{
+width: 100%;
+display: inline-block;
+}
+
+.platforms .platform .link-platform .image-platform{
+    width: 125px;
+    height: 40px;
+    background-size:100%; 
+    display: inline-block;
+    margin: 1rem 0 1rem 1.2rem;
+}
+.platforms .platform .link-platform .span-platform{
+    text-align: center;
+    display: inline-block;
+    float: right;
+    margin: 1rem 1.2rem 1rem 0;
+    border-radius: 5px;
+    border: 1px solid #777;
+    padding: 8px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 155px;
+    color: #777;
+}
+.platforms .platform .link-platform:hover .span-platform{
+transition: .3s ease;
+color: #fff;
+background-color: #222;
+border-color: #222;
+}
+
+.song-link{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+.song-link:focus,
+.song-link:active,
+.song-link:hover,
+.song-link:visited{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}

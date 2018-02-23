@@ -6,7 +6,7 @@ import datetime
 
 # Import Tabla Disco de la base de datos
 from shared.models import Imagen_Pagina
-from .models import Disco, Cancion, Ficha_Tecnica, Disponible_En_Disco #Sencillo, Ficha_Tecnica_Sencillo, Disponible_En_Sencillo
+from .models import Disco, Cancion, Ficha_Tecnica, Disponible_En_Disco, SmartLink, Link_SmartLink #Sencillo, Ficha_Tecnica_Sencillo, Disponible_En_Sencillo
 
 class DiscoCompletoView(View):
     def get(self, request, nombDisco=None, *args, **kwargs):
@@ -28,6 +28,20 @@ class DiscoCompletoView(View):
         }
         return render(request, "discoCompleto.html", content)  
 		
+class SmartLinkView(View):
+    def get(self, request, nombSmart=None, *args, **kwargs):
+        smartlink = get_object_or_404(SmartLink, nombSmart=nombSmart)
+        links = Link_SmartLink.objects.filter(smartlink=smartlink.id)
+        
+        nombreSmart = smartlink.nombre
+        content = {
+            'title' : 'Lalalá | {sc}'.format(sc=nombreSmart),
+            'titulo': '{sc}'.format(sc=nombreSmart),
+            'smartlink' : smartlink,
+            'links' : links,
+        }
+        return render(request, "smartlink.html", content)  
+
 
 #def DiscoView(request):
 #    queryset = Disco.objects.all().order_by('-anno')
